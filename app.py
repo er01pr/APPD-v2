@@ -24,5 +24,4 @@ def home():
     author_list = [author[0] for author in authors]
     print(author_list)
 
-    
     return render_template("index.html", author_list=author_list)
