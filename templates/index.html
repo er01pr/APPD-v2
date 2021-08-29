@@ -12,8 +12,8 @@
 </div>
 
 <div class="container">
-    <h4 class="mb-3">Project</h4>
     <form novalidate>
+        <h4 class="mb-3">Project</h4>
         <div class="row g-3">
             <div>
                 <label for="projectName" class="form-label">Project Name</label>
@@ -37,6 +37,15 @@
                 <div class="invalid-feedback">
                     Valid version number is required.
                 </div>
+            </div>
+            <div class="col-sm-6">
+                <h4 class="mb-3">Profile</h4>
+                <label for="product" class="form-label">Product</label>
+                <select id="product" type="text" class="form-control" placeholder="Choose.." required>
+                        <option value="" disabled selected>Choose..</option>
+                        <option value="dual">Dual</option>
+                        <option value="contact">Contact</option>
+                </select>
             </div>
         </div>
     </form>
