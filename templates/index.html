@@ -38,8 +38,8 @@
                     Valid version number is required.
                 </div>
             </div>
+            <h4 class="mb-1">Profile</h4>
             <div class="col-sm-6">
-                <h4 class="mb-3">Profile</h4>
                 <label for="product" class="form-label">Product</label>
                 <select id="product" type="text" class="form-control" placeholder="Choose.." required>
                         <option value="" disabled selected>Choose..</option>
@@ -47,6 +47,44 @@
                         <option value="contact">Contact</option>
                 </select>
             </div>
+            <div class="col-sm-6">
+                <label for="perso_type" class="form-label">Perso Type</label>
+                <select id="perso_type" type="text" class="form-control" placeholder="Choose.." required>
+                        <option value="" disabled selected>Choose..</option>
+                        <option value="dual">Perso</option>
+                        <option value="contact">Pre-Perso</option>
+                </select>
+            </div>
+            <div class="col-sm-12">
+                <label for="Target Server" class="form-label">Target CPS Server</label>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope ="col">CPS Version</th>
+                            <th scope ="col">Service Pack</th>
+                            <th scope ="col">Office Server</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Test1</td>
+                            <td>Test2</td>
+                            <td>Test3</td>
+                        </tr>
+                        <tr>
+                            <td>Test1</td>
+                            <td>Test2</td>
+                            <td>Test3</td>
+                        </tr>
+                        <tr>
+                            <td>Test1</td>
+                            <td>Test2</td>
+                            <td>Test3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
         </div>
     </form>
 </div>
