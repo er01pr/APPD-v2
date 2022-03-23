@@ -1,3 +1,4 @@
+from cgitb import html
 from flask import Flask, flash, redirect, render_template, request, session, url_for
 import sqlite3
 import os
@@ -35,3 +36,11 @@ def home():
 
 
     return render_template("index.html", author_list=author_list, server_list=server_list)
+
+
+#Card Profile Config
+@app.route("/card")
+    
+def cardconfig():   
+    
+    return render_template("cardconfig.html", methods=["GET","POST"])
