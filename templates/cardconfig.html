@@ -42,16 +42,16 @@
             </div>
         </div>
             <div class="form-check form-check-inline g-3">
-                <input type="checkbox" class="form-check-input">
-                <label class="form-check-label" for="PSE">PSE Supported</label>
+                <input type="checkbox" class="form-check-input checkbox-lg btn-label">
+                <label class="form-check-label btn-label" for="PSE">PSE Supported</label>
             </div>
             <div class="form-check form-check-inline g-3">
-                    <input type="checkbox" class="form-check-input">
-                    <label class="form-check-label" for="PPSE">PPSE Supported</label>
+                    <input type="checkbox" class="form-check-input checkbox-lg btn-label">
+                    <label class="form-check-label btn-label" for="PPSE">PPSE Supported</label>
             </div>
             <div class="form-check form-check-inline g-3">
-                    <input type="checkbox" class="form-check-input">
-                    <label class="form-check-label" for="ndef">NDEF Supported</label>
+                    <input type="checkbox" class="form-check-input checkbox-lg btn-label">
+                    <label class="form-check-label btn-label" for="ndef">NDEF Supported</label>
             </div>
         <hr class="my-4">
         <h4 class="mb-3">CHIP PRODUCT</h4>
@@ -129,10 +129,23 @@
             </div>
             <div class="col-sm-4">
                 <label for="keysetver" class="form-label">Key Set Version</label>
-                <input id="keysetver" type="text" class="form-control">
+                <input id="keysetver" ty gpe="text" class="form-control">
+            </div>
+            <div class="form-check form-check-inline g-3">
+                <input type="checkbox" class="form-check-input checkbox-lg btn-label">
+                <label class="form-check-label btn-label" for="tagCF">Use Tag CF</label>
+            </div>
+            <div class="col-sm-12">
+                <label for="persoLocation" class="form-label">PrePerso and Perso Locations</label>
+                <select id="persoLocation" type="text" class="form-control" placeholder="Choose.." required>
+                        <option value="" disabled selected>Choose..</option>
+                        <option value="ixi">Internal Preperso – Internal Perso</option>
+                        <option value="ixe">Internal Preperso – External Perso</option>
+                        <option value="exi">External Preperso – Internal Perso </option>
+                        <option value="exe">External Preperso – External Perso</option>
+                </select>
             </div>
 
     </form>
 </div>
-
 {% endblock %}

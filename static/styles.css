@@ -5,3 +5,17 @@
 #myButton {
 	margin-bottom: 10px;
 }
+
+.checkbox-lg {
+	top: .8rem;
+	width: 1.55rem;
+	height: 1.55rem;
+	padding-top: 13px;
+	padding-left: 6px;
+}
+
+.btn-label {
+	margin-right: 10px;
+	text-align: left;
+	font-size: 18px;
+}
