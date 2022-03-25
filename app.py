@@ -58,3 +58,10 @@ def cardconfig():
     print(productNames)
     
     return render_template("cardconfig.html", productNames=productNames)
+
+
+@app.route("/pprofile")
+
+def productionProfile ():
+
+    return render_template("productionProfile.html")
