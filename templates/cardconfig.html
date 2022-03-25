@@ -54,7 +54,7 @@
                     <label class="form-check-label btn-label" for="ndef">NDEF Supported</label>
             </div>
         <hr class="my-4">
-        <h4 class="mb-3">CHIP PRODUCT</h4>
+        <h4 class="mb-3">Chip Product</h4>
         <div class="row g-3">
             <div class = "col-sm-6">
                 <label for="productNames" class="form-label">Product Name</label>
@@ -94,7 +94,7 @@
                 <input id="ALCD" type="text" class="form-control">
             </div>
             <div class="col-sm-6">
-                <label for="downsizing" class="form-label">Downsizing (for COSMO)</label>
+                <label for="downsizing" class="form-label">Downsizing</label>
                 <select id="downsizings" type="text" class="form-control" placeholder="Choose.." required>
                         <option value="" disabled selected>Choose..</option>
                         <option value="12K">12K</option>
@@ -169,12 +169,13 @@
                 </select>
             </div>
             <hr class="my-4">
-            <h4 class="mb-3">CARD AUTHENTICATION</h4>
+            <h4 class="mb-3">Card Authentication</h4>
             <div class="col-sm-12">
                 <label for="Target Server" class="form-label">Pre-Perso</label>
                 <table class="table table-striped table-bordered table-hover">
                     <thead class="thead-dark">
                         <tr>
+                            <th scope="col"></th>
                             <th scope ="col">KMC Label</th>
                             <th scope ="col">Value</th>
                             <th scope ="col">KCV</th>
@@ -182,11 +183,39 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td><label for="testKMC" class="form-label">TEST</label></td>
                             <td><input id="cps-version" type="text" class="form-control"></td>
                             <td><input id="service-pack" type="text" class="form-control"></td>
                             <td><input id="service-pack" type="text" class="form-control"></td>
                         </tr>
                         <tr>
+                            <td><label for="liveKMC" class="form-label">LIVE</label></td>
+                            <td><input id="cps-version" type="text" class="form-control"></td>
+                            <td><input id="service-pack" type="text" class="form-control"></td>
+                            <td><input id="service-pack" type="text" class="form-control"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            <div class="col-sm-12">
+                <label for="Target Server" class="form-label">Perso</label>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope ="col">KMC Label</th>
+                            <th scope ="col">Value</th>
+                            <th scope ="col">KCV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label for="testKMC" class="form-label">TEST</label></td>
+                            <td><input id="cps-version" type="text" class="form-control"></td>
+                            <td><input id="service-pack" type="text" class="form-control"></td>
+                            <td><input id="service-pack" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="liveKMC" class="form-label">LIVE</label></td>
                             <td><input id="cps-version" type="text" class="form-control"></td>
                             <td><input id="service-pack" type="text" class="form-control"></td>
                             <td><input id="service-pack" type="text" class="form-control"></td>
