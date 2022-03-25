@@ -75,6 +75,36 @@
                     Valid version number is required.
                 </div>
             </div>
+            <div class = "col-sm-6">
+                <label for="atrConfig" class="form-label">ATR Configuration</label>
+                <input id="atrConfig" type="text" class="form-control" required>
+                <div class="invalid-feedback">
+                    Valid version number is required.
+                </div>
+            </div>
+            <div class = "col-sm-6">
+                <label for="LOAno" class="form-label">LOA no.</label>
+                <input id="LOAno" type="text" class="form-control" required>
+                <div class="invalid-feedback">
+                    Valid version number is required.
+                </div>
+            </div>
+            <div class = "col-sm-6">
+                <label for="ALCD" class="form-label">ALCD (for MASTERCARD only)</label>
+                <input id="ALCD" type="text" class="form-control">
+            </div>
+            <div class="col-sm-6">
+                <label for="downsizing" class="form-label">Downsizing (for COSMO)</label>
+                <select id="downsizings" type="text" class="form-control" placeholder="Choose.." required>
+                        <option value="" disabled selected>Choose..</option>
+                        <option value="12K">12K</option>
+                        <option value="16K">16K</option>
+                        <option value="24K">24K</option>
+                        <option value="32K">32K</option>
+                        <option value="64K">64K</option>
+                        <option value="NoDS">No Downsizing</option>
+                </select>
+            </div>
     </form>
 </div>
 
