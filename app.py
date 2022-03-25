@@ -43,4 +43,4 @@ def home():
     
 def cardconfig():   
     
-    return render_template("cardconfig.html", methods=["GET","POST"])
+    return render_template("cardconfig.html")
