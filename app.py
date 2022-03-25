@@ -21,6 +21,7 @@ def home():
     authors = cursor.execute(readdb)
     authors = authors.fetchall()
 
+
     #Convert author tuples to list via list comprehension
     author_list = [author[0] for author in authors]
     print(author_list)
@@ -41,6 +42,19 @@ def home():
 #Card Profile Config
 @app.route("/card")
     
-def cardconfig():   
+def cardconfig():  
+
+    #Configure App to connect with the SQLite Database
+    connection = sqlite3.connect('appd.db')
+    cursor = connection.cursor() 
+
+    #Read and fetch Products in the database.
+    readdb = "SELECT PRODUCT_name FROM Products"
+    products = cursor.execute(readdb)
+    products = products.fetchall()
+
+    #Convert product tuples to list via list comprehension
+    productNames = [product[0] for product in products]
+    print(productNames)
     
-    return render_template("cardconfig.html")
+    return render_template("cardconfig.html", productNames=productNames)
