@@ -145,6 +145,55 @@
                         <option value="exe">External Preperso – External Perso</option>
                 </select>
             </div>
+            <h5>Card Manager Status</h5>
+            <div class="col-sm-6">
+                <label for="prepersoStatus" class="form-label">Pre-Personalization Status</label>
+                <select id="prepersoStatus" type="text" class="form-control" placeholder="Choose.." required>
+                        <option value="" disabled selected>Choose..</option>
+                        <option value="opRead">OP Read</option>
+                        <option value="init">Initialized</option>
+                        <option value="secured">Secured</option>
+                        <option value="cardLocked">Card Locked</option>
+                        <option value="terminated">Terminated</option>
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <label for="prepersoStatus" class="form-label">Personalization Status</label>
+                <select id="prepersoStatus" type="text" class="form-control" placeholder="Choose.." required>
+                        <option value="" disabled selected>Choose..</option>
+                        <option value="opRead">OP Read</option>
+                        <option value="init">Initialized</option>
+                        <option value="secured">Secured</option>
+                        <option value="cardLocked">Card Locked</option>
+                        <option value="terminated">Terminated</option>
+                </select>
+            </div>
+            <hr class="my-4">
+            <h4 class="mb-3">CARD AUTHENTICATION</h4>
+            <div class="col-sm-12">
+                <label for="Target Server" class="form-label">Pre-Perso</label>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope ="col">KMC Label</th>
+                            <th scope ="col">Value</th>
+                            <th scope ="col">KCV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input id="cps-version" type="text" class="form-control"></td>
+                            <td><input id="service-pack" type="text" class="form-control"></td>
+                            <td><input id="service-pack" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><input id="cps-version" type="text" class="form-control"></td>
+                            <td><input id="service-pack" type="text" class="form-control"></td>
+                            <td><input id="service-pack" type="text" class="form-control"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
     </form>
 </div>
