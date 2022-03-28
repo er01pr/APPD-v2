@@ -160,7 +160,20 @@
                     <input type="radio" class="form-check-input" name="signedDataRadio">
                     <label class="form-check-label btn-label" for="asPerRef">Specific Structure</label>
                 </div>
+                
+
             </div> 
+            <div>
+                <div class="col-sm-4">
+                    <label for="macLength" class="form-label">MAC Length</label>
+                    <select id="macLengths" type="text" class="form-control" placeholder="Choose.." required>
+                            <option value="" disabled selected>Choose..</option>
+                            <option value="4">4</option>
+                            <option value="8">16</option>
+                            <option value="N/A">N/A</option>
+                    </select>
+                </div>  
+            </div>
             </div>
             
             <hr class="my-4">
@@ -188,13 +201,9 @@
                 </div>
                 <div class="col-sm-4">
                     <label for="keysetver" class="form-label">Key Set Version</label>
-                    <input id="keysetver" ty gpe="text" class="form-control">
+                    <input id="keysetver" type="text" class="form-control">
                 </div>
-                <div class="form-check form-check-inline g-3">
-                    <input type="checkbox" class="form-check-input checkbox-lg btn-label">
-                    <label class="form-check-label btn-label" for="tagCF">Use Tag CF</label>
-                </div>
-                <div class="col-sm-12">
+                <div class="col-sm-12 mb-3">
                     <label for="persoLocation" class="form-label">PrePerso and Perso Locations</label>
                     <select id="persoLocation" type="text" class="form-control" placeholder="Choose.." required>
                             <option value="" disabled selected>Choose..</option>
@@ -204,6 +213,15 @@
                             <option value="exe">External Preperso – External Perso</option>
                     </select>
                 </div>
+            </div>
+            <div class="form-check form-check-inline g-2 mb-2">
+                <input type="checkbox" class="form-check-input checkbox-lg btn-label">
+                <label class="form-check-label btn-label" for="tagCF">Use Tag CF</label>
+            </div>
+
+            <h5 class="mt-4">Card Manager Status</h5>
+
+            <div class="row mb-3">
                 <div class="col-sm-6">
                     <label for="prepersoStatus" class="form-label">Pre-Personalization Status</label>
                     <select id="prepersoStatus" type="text" class="form-control" placeholder="Choose.." required>
@@ -227,8 +245,6 @@
                     </select>
                 </div>
             </div>
-            <h5>Card Manager Status</h5>
-
             <hr class="my-4">
             <h4 class="mb-3">Card Authentication</h4>
             <div class="col-sm-12">
