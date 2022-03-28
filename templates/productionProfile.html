@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Production Profile Perso Config
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="py-5 text-center">
+        <h2>Application Profile Definition</h2>
+    </div>
+</div>
+
+<div class="container">
+    <form novalidate>
+        <h4>Customer Details</h4>
+        <div class="row g-3">
+            <div class="col-md-12">
+                <label for="customerOffer" class="form-label">Customer Offer</label>
+                <input id="customerOffer" type="text" class="form-control">
+            </div>
+            <div class="col-md-12">
+                <label for="grammar" class="form-label">Grammar</label>
+                <input id="grammar" type="text" class="form-control">
+            </div>
+            <div class="col-md-12">
+                <label for="itemPerso" class="form-label">Item to Personalize</label>
+                <input id="itemPerso" type="text" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="customerProduct" class="form-label">Customer Product</label>
+                <input id="customerProduct" type="text" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="axCode" class="form-label">AX Code Reference</label>
+                <input id="axCode" type="text" class="form-control">
+            </div>
+
+            <hr class="my-4">
+            <h4 class="mb-1">Production Profile Setup</h4>
+
+            <div class="col-md-12">
+                <label for="persoAction" class="form-label">Steps to run that will define in Perso Actions</label>
+                <select id="persoAction" type="text" class="form-control" placeholder="Choose.." required>
+                        <option value="" disabled selected>Choose..</option>
+                        <option value="Perso">Perso</option>
+                        <option value="prePerso">Pre-Perso</option>
+                        <option value="loadOSPrp">Load OS then Pre-Perso</option>
+                </select>
+            </div>
+            <div class="col-md-12">
+                <label for="referenceExt" class="form-label">Reference Profile for External Processing</label>
+                <input id="referenceExt" type="text" class="form-control">
+            </div>
+            <div class="col-md-12">
+                <label for="referenceIC" class="form-label">Reference Profile for IC Perso</label>
+                <input id="referenceIC" type="text" class="form-control">
+            </div>
+            <div class="col-md-12">
+                <label for="ruleName" class="form-label">Naming Convention for Rule Names</label>
+                <input id="ruleName" type="text" class="form-control">
+            </div>
+
+            <hr class="my-4">
+            <h4 class="mb-1">Magstripe Setup</h4>
+            <h6>Detail the construction of all 3 tracks</h6>
+
+            <div class="row">
+                <label for="track1" class="form-label">Track 1</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    </div>
+                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                        <option value="" disabled selected>Choose..</option>
+                        <option value="defbyRule">Defined by Rule</option>
+                        <option value="defbyInput">Defined within Input File</option>
+                        <option value="sameAsRef">Same as Reference Profile</option>
+                    </select>
+                </div>
+                <label for="track2" class="form-label">Track 2</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    </div>
+                    <select id="track2" type="text" class="form-control" placeholder="Choose.." required>
+                        <option value="" disabled selected>Choose..</option>
+                        <option value="defbyRule2">Defined by Rule</option>
+                        <option value="defbyInput2">Defined within Input File</option>
+                        <option value="sameAsRef2">Same as Reference Profile</option>
+                    </select>
+                </div>
+                <label for="track2" class="form-label">Track 3</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    </div>
+                    <select id="track3" type="text" class="form-control" placeholder="Choose.." required>
+                        <option value="" disabled selected>Choose..</option>
+                        <option value="defbyRule3">Defined by Rule</option>
+                        <option value="defbyInput3">Defined within Input File</option>
+                        <option value="sameAsRef3">Same as Reference Profile</option>
+                    </select>
+                </div>
+            </div>
+            
+
+        </div>
+    </form>
+</div>
+{% endblock %}
