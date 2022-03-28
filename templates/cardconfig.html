@@ -108,71 +108,127 @@
 
             <hr class="my-4">
             <h4 class="mb-3">Application Template</h4>
+            <h6>Tag Values :</h6>
+            <div class="form-check">
+                <div class="form-check-inline g-3 col-sm-4">
+                    <input type="radio" class="form-check-input" name="tagRadio">
+                    <label class="form-check-label btn-label" for="asPerInput">As per input file</label>
+                </div>
+                <div class="form-check-inline g-3 col-sm-4">
+                        <input type="radio" class="form-check-input " name="tagRadio">
+                        <label class="form-check-label btn-label" for="asPerTech">As per Technical Document</label>
+                </div>
+                <div class="form-check-inline g-3 col-sm-4">
+                        <input type="radio" class="form-check-input" name="tagRadio">
+                        <label class="form-check-label btn-label" for="asPerRef">As per Reference Profile</label>
+                </div>   
+            </div>
+            <input id="tagValues" type="text" class="form-control">
 
+            <h6>File Structure :</h6>
+            <div class="form-check">
+                <div class="form-check-inline g-3 col-sm-4">
+                    <input type="radio" class="form-check-input" name="structureRadio">
+                    <label class="form-check-label btn-label" for="asPerInput">As per input file</label>
+                </div>
+                <div class="form-check-inline g-3 col-sm-4">
+                        <input type="radio" class="form-check-input " name="structureRadio">
+                        <label class="form-check-label btn-label" for="asPerTech">As per Technical Document</label>
+                </div>
+                <div class="form-check-inline g-3 col-sm-4">
+                        <input type="radio" class="form-check-input" name="structureRadio">
+                        <label class="form-check-label btn-label" for="asPerRef">As per Reference Profile</label>
+                </div>   
+            </div>
+            <input id="fileStructure" type="text" class="form-control">
 
+            <h6>Signed Data :</h6>
+            <div class="form-check">
+                <div class="form-check-inline g-3 col-sm-4">
+                    <input type="radio" class="form-check-input" name="signedDataRadio">
+                    <label class="form-check-label btn-label" for="asPerInput">As per input file</label>
+                </div>
+                <div class="form-check-inline g-3 col-sm-4">
+                        <input type="radio" class="form-check-input " name="signedDataRadio">
+                        <label class="form-check-label btn-label" for="asPerTech">As per Technical Document</label>
+                </div>
+                <div class="form-check-inline g-3 col-sm-4">
+                        <input type="radio" class="form-check-input" name="signedDataRadio">
+                        <label class="form-check-label btn-label" for="asPerRef">As per Reference Profile</label>
+                </div>   
+                <div class="form-check-inline g-3 col-sm-4">
+                    <input type="radio" class="form-check-input" name="signedDataRadio">
+                    <label class="form-check-label btn-label" for="asPerRef">Specific Structure</label>
+                </div>
+            </div> 
+            </div>
+            
             <hr class="my-4">
             <h4 class="mb-3">PrePerso & Perso Configuration</h4>
-            <div>
-                <label for="referenceCard" class="form-label">Reference for Card Configuration</label>
-                <input id="referenceCard" type="text" class="form-control">
-            </div>
-            <div>
-                <label for="cardAID" class="form-label">Card AID</label>
-                <input id="cardAID" type="text" class="form-control">
-            </div>
-            <div class="col-sm-6">
-                <label for="protocol" class="form-label">Protocol</label>
-                <input id="protocol" type="text" class="form-control">
-            </div>
-            <div class="col-sm-6">
-                <label for="secureChannel" class="form-label">Secure Channel</label>
-                <input id="secureChannel" type="text" class="form-control">
-            </div>
-            <div class="col-sm-8">
-                <label for="additionalNotes" class="form-label">Additional Notes/Requests</label>
-                <input id="additionalNotes" type="text" class="form-control">
-            </div>
-            <div class="col-sm-4">
-                <label for="keysetver" class="form-label">Key Set Version</label>
-                <input id="keysetver" ty gpe="text" class="form-control">
-            </div>
-            <div class="form-check form-check-inline g-3">
-                <input type="checkbox" class="form-check-input checkbox-lg btn-label">
-                <label class="form-check-label btn-label" for="tagCF">Use Tag CF</label>
-            </div>
-            <div class="col-sm-12">
-                <label for="persoLocation" class="form-label">PrePerso and Perso Locations</label>
-                <select id="persoLocation" type="text" class="form-control" placeholder="Choose.." required>
-                        <option value="" disabled selected>Choose..</option>
-                        <option value="ixi">Internal Preperso – Internal Perso</option>
-                        <option value="ixe">Internal Preperso – External Perso</option>
-                        <option value="exi">External Preperso – Internal Perso </option>
-                        <option value="exe">External Preperso – External Perso</option>
-                </select>
+            <div class="row">
+                <div>
+                    <label for="referenceCard" class="form-label">Reference for Card Configuration</label>
+                    <input id="referenceCard" type="text" class="form-control">
+                </div>
+                <div>
+                    <label for="cardAID" class="form-label">Card AID</label>
+                    <input id="cardAID" type="text" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                    <label for="protocol" class="form-label">Protocol</label>
+                    <input id="protocol" type="text" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                    <label for="secureChannel" class="form-label">Secure Channel</label>
+                    <input id="secureChannel" type="text" class="form-control">
+                </div>
+                <div class="col-sm-8">
+                    <label for="additionalNotes" class="form-label">Additional Notes/Requests</label>
+                    <input id="additionalNotes" type="text" class="form-control">
+                </div>
+                <div class="col-sm-4">
+                    <label for="keysetver" class="form-label">Key Set Version</label>
+                    <input id="keysetver" ty gpe="text" class="form-control">
+                </div>
+                <div class="form-check form-check-inline g-3">
+                    <input type="checkbox" class="form-check-input checkbox-lg btn-label">
+                    <label class="form-check-label btn-label" for="tagCF">Use Tag CF</label>
+                </div>
+                <div class="col-sm-12">
+                    <label for="persoLocation" class="form-label">PrePerso and Perso Locations</label>
+                    <select id="persoLocation" type="text" class="form-control" placeholder="Choose.." required>
+                            <option value="" disabled selected>Choose..</option>
+                            <option value="ixi">Internal Preperso – Internal Perso</option>
+                            <option value="ixe">Internal Preperso – External Perso</option>
+                            <option value="exi">External Preperso – Internal Perso </option>
+                            <option value="exe">External Preperso – External Perso</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <label for="prepersoStatus" class="form-label">Pre-Personalization Status</label>
+                    <select id="prepersoStatus" type="text" class="form-control" placeholder="Choose.." required>
+                            <option value="" disabled selected>Choose..</option>
+                            <option value="opRead">OP Read</option>
+                            <option value="init">Initialized</option>
+                            <option value="secured">Secured</option>
+                            <option value="cardLocked">Card Locked</option>
+                            <option value="terminated">Terminated</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <label for="prepersoStatus" class="form-label">Personalization Status</label>
+                    <select id="prepersoStatus" type="text" class="form-control" placeholder="Choose.." required>
+                            <option value="" disabled selected>Choose..</option>
+                            <option value="opRead">OP Read</option>
+                            <option value="init">Initialized</option>
+                            <option value="secured">Secured</option>
+                            <option value="cardLocked">Card Locked</option>
+                            <option value="terminated">Terminated</option>
+                    </select>
+                </div>
             </div>
             <h5>Card Manager Status</h5>
-            <div class="col-sm-6">
-                <label for="prepersoStatus" class="form-label">Pre-Personalization Status</label>
-                <select id="prepersoStatus" type="text" class="form-control" placeholder="Choose.." required>
-                        <option value="" disabled selected>Choose..</option>
-                        <option value="opRead">OP Read</option>
-                        <option value="init">Initialized</option>
-                        <option value="secured">Secured</option>
-                        <option value="cardLocked">Card Locked</option>
-                        <option value="terminated">Terminated</option>
-                </select>
-            </div>
-            <div class="col-sm-6">
-                <label for="prepersoStatus" class="form-label">Personalization Status</label>
-                <select id="prepersoStatus" type="text" class="form-control" placeholder="Choose.." required>
-                        <option value="" disabled selected>Choose..</option>
-                        <option value="opRead">OP Read</option>
-                        <option value="init">Initialized</option>
-                        <option value="secured">Secured</option>
-                        <option value="cardLocked">Card Locked</option>
-                        <option value="terminated">Terminated</option>
-                </select>
-            </div>
+
             <hr class="my-4">
             <h4 class="mb-3">Card Authentication</h4>
             <div class="col-sm-12">
