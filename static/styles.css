@@ -24,3 +24,6 @@ body {
 	min-height: 8000px;
 }
 
+.externalLabel {
+	width: 120px;
+}
