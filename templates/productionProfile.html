@@ -78,10 +78,14 @@
                         <option value="sameAsRef">Same as Reference Profile</option>
                     </select>
                 </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Track 1" id="track1txt"></textarea>
+                    <label class="form-label" for="track1txt">  Track 1 </label>
+                </div>
                 <label for="track2" class="form-label">Track 2</label>
                 <div class="input-group mb-3">
                     <div class="input-group-text">
-                      <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input">
+                      <input class="form-check-input" type="checkbox" value="" id="trk1" aria-label="Checkbox for following text input" onclick="showHide1()">
                     </div>
                     <select id="track2" type="text" class="form-control" placeholder="Choose.." required>
                         <option value="" disabled selected>Choose..</option>
@@ -90,7 +94,11 @@
                         <option value="sameAsRef2">Same as Reference Profile</option>
                     </select>
                 </div>
-                <label for="track2" class="form-label">Track 3</label>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Track 2" id="track1txt"></textarea>
+                    <label class="form-label" for="track1txt">  Track 2 </label>
+                </div>
+                <label for="track3" class="form-label">Track 3</label>
                 <div class="input-group mb-3">
                     <div class="input-group-text">
                       <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input">
@@ -102,8 +110,15 @@
                         <option value="sameAsRef3">Same as Reference Profile</option>
                     </select>
                 </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Track 3" id="track1txt"></textarea>
+                    <label class="form-label" for="track3txt">  Track 3 </label>
+                </div>
             </div>
-            
+
+            <hr class="my-4">
+            <h4 class="mb-1">External Processing</h4>
+
 
         </div>
     </form>

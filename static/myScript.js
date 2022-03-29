@@ -2,6 +2,7 @@ function showHide(){
     var checkbox = document.getElementById("chk")
     var hiddeninputs = document.getElementsByClassName("hidden")
 
+
     for (var i = 0; i != hiddeninputs.length; i++ ) {
         if(checkbox.checked){
             hiddeninputs[i].style.display = "block"
@@ -11,6 +12,7 @@ function showHide(){
         }
     }
 }
+
 
 function addRow() { //Not working properly
     
