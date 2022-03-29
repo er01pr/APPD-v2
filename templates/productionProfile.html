@@ -118,8 +118,18 @@
 
             <hr class="my-4">
             <h4 class="mb-1">External Processing</h4>
+            <h6 class="mb-1">Key Management</h6>
 
-
+            <div class="form-check ms-1">
+                <div class="col-sm-12">
+                    <input type="radio" class="form-check-input" name="keysRadio">
+                    <label class="form-check-label btn-label" for="keysRegion">Keys provided by Region (will be stored on Local DP-HSM)</label>
+                </div>
+                <div class="col-sm-12">
+                        <input type="radio" class="form-check-input " name="keysRadio">
+                        <label class="form-check-label btn-label" for="keysStored">Keys are already stored in Regional DPHSM. Please indicate machine name.</label>
+                </div>
+            </div>
         </div>
     </form>
 </div>
