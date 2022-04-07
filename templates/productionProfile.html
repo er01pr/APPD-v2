@@ -183,6 +183,10 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="g-2 padding-xs" id="myButton">
+                    <button type="button" class="btn btn-success btn-sm" onclick="addRow()">Add row</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="deleteRow()" id="deleteBtn">Delete row</button>
+                </div>
             </div>
             <div class="input-group mb-2">
                 <div class="input-group-text">
@@ -213,6 +217,28 @@
                     <label class="form-check-label" for="ipkRegion">IPK provided by the Customer/Region</label>
                 </div>
             </div>
+            <div class="col-sm-12">
+                <table class="table table-striped table-bordered table-hover text-center">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope ="col"class="col-sm-3">Label</th>
+                            <th scope ="col"class="col-sm-4">Expiry Date</th>
+                            <th scope ="col" class="col-sm-3">Application Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input id="ipkLabel" type="text" class="form-control"></td>
+                            <td><input id="expiryDate" type="text" class="form-control"></td>
+                            <td><input id="ipkAppName" type="text" class="form-control"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="g-2 padding-xs" id="myButton">
+                    <button type="button" class="btn btn-success btn-sm" onclick="addRow()">Add row</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="deleteRow()" id="deleteBtn">Delete row</button>
+                </div>
+            </div>
             <div class="input-group mb-2">
                 <div class="input-group-text">
                   <label class="externalLabel">Certificates</label>
@@ -233,6 +259,44 @@
                     <option value="" disabled selected>Choose..</option>
                     <option value="defbyRule">Computed by DPHSM</option>
                     <option value="defbyInput">From Input File</option>
+                </select>
+            </div>
+            <div class="col-sm-12">
+                <table class="table table-striped table-bordered table-hover text-center">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope ="col"class="col-sm-3">Label</th>
+                            <th scope ="col"class="col-sm-4">Value</th>
+                            <th scope ="col" class="col-sm-3">KCV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input id="cvkLabel" type="text" class="form-control"></td>
+                            <td><input id="cvkVal" type="text" class="form-control"></td>
+                            <td><input id="cvkKCV" type="text" class="form-control"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="g-2 padding-xs" id="myButton">
+                    <button type="button" class="btn btn-success btn-sm" onclick="addRow()">Add row</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="deleteRow()" id="deleteBtn">Delete row</button>
+                </div>
+            </div>
+            <div class="input-group mb-3 col">
+                <label class="input-group-text" for="inputGroupCVV">CVV Expiration Date Format</label>
+                <select class="form-select" id="inputGroupCVV">
+                  <option disabled selected>Choose...</option>
+                  <option value="YYMM">YYMM</option>
+                  <option value="MMYY">MMYY</option>
+                </select>
+            </div>
+            <div class="input-group mb-3 col">
+                <label class="input-group-text" for="inputGroupiCVV">iCVV Expiration Date Format</label>
+                <select class="form-select" id="inputGroupiCVV">
+                  <option disabled selected>Choose...</option>
+                  <option value="YYMM">YYMM</option>
+                  <option value="MMYY">MMYY</option>
                 </select>
             </div>
             <div class="input-group mb-2">
