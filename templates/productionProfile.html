@@ -310,9 +310,49 @@
                     <option value="defbyInput">From Input File</option>
                 </select>
             </div>
-
+            <div class="mb-3 col">
+                <label for="inputGroupPIN" class="form-label">Input PIN Block Format</label>
+                <select class="form-select" id="inputGroupPIN">
+                  <option disabled selected>Choose...</option>
+                  <option value="iso0">ISO0</option>
+                  <option value="iso1">ISO1</option>
+                  <option value="iso2">ISO2</option>
+                  <option value="iso3">ISO3</option>
+                  <option value="iso4">ISO4</option>
+                  <option value="offset">OFFSET</option>
+                  <option value="otherPIN">OTHER</option>
+                </select>
+            </div>
+            <div class="mb-3 col">
+                <label for="OutputGroupPIN" class="form-label">Output PIN Block Format</label>
+                <select class="form-select" id="OutputGroupPIN">
+                  <option disabled selected>Choose...</option>
+                  <option value="iso0">ISO0</option>
+                  <option value="iso1">ISO1</option>
+                  <option value="iso2">ISO2</option>
+                  <option value="iso3">ISO3</option>
+                  <option value="iso4">ISO4</option>
+                  <option value="offset">OFFSET</option>
+                  <option value="otherPIN">OTHER</option>
+                </select>
+            </div>
+            <div class="mb-3 col">
+                <label class="form-label" for="encryptionType">Detail Encryption Type</label>
+                <select class="form-select" id="encryptionType">
+                  <option disabled selected>Choose...</option>
+                  <option value="Clear">Clear</option>
+                  <option value="Under 3DES ZPK">Under 3DES ZPK</option>
+                  <option value="iso2">Under AES ZPK</option>
+                  <option value="other">Other</option>
+                </select>
+            </div>
         </div>
-            
+        <hr class="my-4">
+        <h4 class="mb-2">PRE-PERSO CODE</h4>
+        <div class="form-check-inline g-3">
+            <input type="checkbox" class="form-check-input">
+            <label class="form-check-label" for="prpCode">Check if Preperso Code will be required to create.</label>
+        </div>
         </div>
     </form>
 </div>
