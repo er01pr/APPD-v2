@@ -31,3 +31,7 @@ body {
 .additionalInfoLabel {
 	width: 300px;
 }
+
+.infoTxtLabel {
+	height: 120px !important; 
+}
