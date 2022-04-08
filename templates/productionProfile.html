@@ -123,11 +123,11 @@
             <div class="form-check ms-1">
                 <div class="col-sm-12">
                     <input type="radio" class="form-check-input" name="keysRadio">
-                    <label class="form-check-label btn-label" for="keysRegion">Keys provided by Region (will be stored on Local DP-HSM)</label>
+                    <label class="form-check-label" for="keysRegion">Keys provided by Region (will be stored on Local DP-HSM)</label>
                 </div>
                 <div class="col-sm-12">
                         <input type="radio" class="form-check-input " name="keysRadio">
-                        <label class="form-check-label btn-label" for="keysStored">Keys are already stored in Regional DPHSM. Please indicate machine name.</label>
+                        <label class="form-check-label" for="keysStored">Keys are already stored in Regional DPHSM. Please indicate machine name.</label>
                 </div>
                 <div class="mb-3">
                     <label for="keytxt" class="form-label"> </label>
@@ -346,14 +346,70 @@
                   <option value="other">Other</option>
                 </select>
             </div>
-        </div>
-        <hr class="my-4">
-        <h4 class="mb-2">PRE-PERSO CODE</h4>
-        <div class="form-check-inline g-3">
-            <input type="checkbox" class="form-check-input">
-            <label class="form-check-label" for="prpCode">Check if Preperso Code will be required to create.</label>
-        </div>
-        </div>
+        
+            <hr class="my-4">
+            <h4 class="mb-2">PRE-PERSO CODE</h4>
+            <div class="form-check-inline g-3">
+                <input type="checkbox" class="form-check-input">
+                <label class="form-check-label" for="prpCode">Check if Preperso Code will be required to create.</label>
+            </div>
+            <hr class="my-4">
+            <h4 class="mb-2">Additional Informations</h4>
+            <div class="input-group flex-nowrap mb-2">
+                <span class="input-group-text" id="addon-wrapping">PAN Sequence Number (PSN): </span>
+                <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <option value="" disabled selected>Choose..</option>
+                    <option value="defbyRule">Defined by Rule</option>
+                    <option value="defbyInput">Defined within Input File</option>
+                    <option value="sameAsRef">Same as Reference Profile</option>
+                </select>
+            </div>
+            <div class="input-group flex-nowrap mb-2">
+                <span class="input-group-text" id="addon-wrapping">EXPIRATION DATE: </span>
+                <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <option value="" disabled selected>Choose..</option>
+                    <option value="defbyRule">Defined by Rule</option>
+                    <option value="defbyInput">Defined within Input File</option>
+                    <option value="sameAsRef">Same as Reference Profile</option>
+                </select>
+            </div>
+            <div class="input-group flex-nowrap mb-2">
+                <span class="input-group-text" id="addon-wrapping">EFFECTIVE DATE: </span>
+                <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <option value="" disabled selected>Choose..</option>
+                    <option value="defbyRule">Defined by Rule</option>
+                    <option value="defbyInput">Defined within Input File</option>
+                    <option value="sameAsRef">Same as Reference Profile</option>
+                </select>
+            </div>
+            <div class="input-group flex-nowrap mb-2">
+                <span class="input-group-text" id="addon-wrapping">SERVICE CODE: </span>
+                <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <option value="" disabled selected>Choose..</option>
+                    <option value="defbyRule">Defined by Rule</option>
+                    <option value="defbyInput">Defined within Input File</option>
+                    <option value="sameAsRef">Same as Reference Profile</option>
+                </select>
+            </div>
+            <div class="input-group flex-nowrap mb-2">
+                <span class="input-group-text" id="addon-wrapping">DERIVATION KEY INDEX(DKI): </span>
+                <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <option value="" disabled selected>Choose..</option>
+                    <option value="defbyRule">Defined by Rule</option>
+                    <option value="defbyInput">Defined within Input File</option>
+                    <option value="sameAsRef">Same as Reference Profile</option>
+                </select>
+            </div>
+            <div class="input-group flex-nowrap mb-2">
+                <span class="input-group-text" id="addon-wrapping">CRYPTOGRAM VERSION NUMBER(CVN): </span>
+                <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <option value="" disabled selected>Choose..</option>
+                    <option value="defbyRule">Defined by Rule</option>
+                    <option value="defbyInput">Defined within Input File</option>
+                    <option value="sameAsRef">Same as Reference Profile</option>
+                </select>
+            </div>
+        </div>  
     </form>
 </div>
 {% endblock %}
