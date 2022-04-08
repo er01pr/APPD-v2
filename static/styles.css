@@ -27,3 +27,7 @@ body {
 .externalLabel {
 	width: 120px;
 }
+
+.additionalInfoLabel {
+	width: 300px;
+}
