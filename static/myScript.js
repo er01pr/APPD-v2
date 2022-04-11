@@ -1,3 +1,4 @@
+//A function to show or hide the Complementary files input group in index.html
 function showHide(){
     var checkbox = document.getElementById("chk")
     var hiddeninputs = document.getElementsByClassName("hidden")
@@ -13,6 +14,11 @@ function showHide(){
     }
 }
 
+//A function to show or hide the Track(s) TextArea upon selecting "Defined By Rule" in Select.
+function showDiv(divId, element)
+{
+    document.getElementById(divId).style.display = element.value == 1 ? 'block' : 'none';
+}
 
 function addRow() { //Not working properly
     
@@ -28,4 +34,11 @@ function addRow() { //Not working properly
 
     cell1.innerHTML = "NEW CELL1";
     cell2.innerHTML = "NEW CELL2";
+}
+
+
+function toggleSelect()
+{
+  var isChecked = document.getElementById("track1_check").checked;
+  document.getElementById("track1_select").disabled = !isChecked;
 }

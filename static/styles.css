@@ -39,3 +39,8 @@ body {
 .additionalNotes {
 	height: 350px !important;
 }
+
+#hidden_track1txt
+{
+	display : none
+}

@@ -68,18 +68,17 @@
                 <div class="input-group mb-2">
                     <div class="input-group-text">
                       <label>Track1</label>
-                      <input class="form-check-input ms-2" type="checkbox" value="" aria-label="Checkbox for following text input">
+                      <input id="track1_check" class="form-check-input ms-2"  type="checkbox" value="" onClick="toggleSelect()">
                     </div>
-                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <select id="track1_select" type="text" class="form-control" placeholder="Choose.." required onchange="showDiv('hidden_track1txt', this)" disabled>
                         <option value="" disabled selected>Choose..</option>
-                        <option value="defbyRule">Defined by Rule</option>
+                        <option value="1">Defined by Rule</option>
                         <option value="defbyInput">Defined within Input File</option>
                         <option value="sameAsRef">Same as Reference Profile</option>
                     </select>
                 </div>
-
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Track 1" id="track1txt"></textarea>
+            <div class="form-floating" id="hidden_track1txt">
+                <textarea class="form-control " placeholder="Track 1" id="track1txt"></textarea>
                 <label class="form-label" for="track1txt">  Track 1 </label>
             </div>
             <div class="input-group mb-3">
@@ -349,10 +348,7 @@
         
             <hr class="my-4">
             <h4 class="mb-2">PRE-PERSO CODE</h4>
-            <div class="form-check-inline g-3">
-                <input type="checkbox" class="form-check-input">
-                <label class="form-check-label" for="prpCode">Check if Preperso Code will be required to create.</label>
-            </div>
+ 
             <hr class="my-4">
             <h4 class="mb-2">Additional Informations</h4>
             <div class="input-group flex-nowrap mb-2">
@@ -419,7 +415,7 @@
                 <div class="input-group-text">
                     <label class="additionalInfoLabel">DERIVATION KEY INDEX (DKI)</label>
                 </div>
-                <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                <select id="dki" type="text" class="form-control" placeholder="Choose.." required>
                     <option value="" disabled selected>Choose..</option>
                     <option value="defbyRule">Defined by Rule</option>
                     <option value="defbyInput">Defined within Input File</option>
