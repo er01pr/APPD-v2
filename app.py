@@ -65,3 +65,9 @@ def cardconfig():
 def productionProfile ():
 
     return render_template("productionProfile.html")
+
+@app.route("/additional")
+
+def additionalReq ():
+    
+    return render_template("additionalreq.html")
