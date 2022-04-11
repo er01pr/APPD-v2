@@ -35,3 +35,7 @@ body {
 .infoTxtLabel {
 	height: 120px !important; 
 }
+
+.additionalNotes {
+	height: 350px !important;
+}
