@@ -40,12 +40,7 @@ body {
 	height: 350px !important;
 }
 
-#hidden_track1txt, #hidden_track2txt, #hidden_track3txt
-{
-	display : none
-}
-
-#hidden_track2txt
+#hidden_track1txt, #hidden_track2txt, #hidden_track3txt, #hiddenEmv
 {
 	display : none
 }

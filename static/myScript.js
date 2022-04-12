@@ -47,6 +47,7 @@ function toggleSelect1()
 {
     var isChecked = document.getElementById("track2_check").checked
     document.getElementById("track2_select").disabled = !isChecked;
+    
 } 
 
 function toggleSelect2()
@@ -54,4 +55,21 @@ function toggleSelect2()
     var isChecked = document.getElementById("track3_check").checked
     document.getElementById("track3_select").disabled = !isChecked;
 } 
+
+function toggleSelect3()
+{
+    var hiddenEmv = document.getElementById("hiddenEmv")
+    var isChecked = document.getElementById("deskeys_check").checked
+    document.getElementById("deskeys_select").disabled = !isChecked;
+
+    if (isChecked){
+        hiddenEmv.style.display = "block"
+    }
+    else {
+        hiddenEmv.style.display = "none"
+    } 
+    
+
+} 
+
 

@@ -137,15 +137,15 @@
             <div class="input-group mb-2">
                 <div class="input-group-text">
                   <label class="externalLabel">EMV 3DES Keys   </label>
-                  <input class="form-check-input ms-2" type="checkbox" value="" aria-label="Checkbox for following text input" onClick="toggleSelect3()">
+                  <input id="deskeys_check" class="form-check-input ms-2" type="checkbox" value="" aria-label="Checkbox for following text input" onClick="toggleSelect3()">
                 </div>
-                <select id="emv" type="text" class="form-control" placeholder="Choose.." required>
+                <select id="deskeys_select" type="text" class="form-control" placeholder="Choose.." required disabled>
                     <option value="" disabled selected>Choose..</option>
                     <option value="defbyRule">Computed by DPHSM</option>
                     <option value="defbyInput">From Input File</option>
                 </select>
             </div>
-            <div class="col-sm-12 hidden">
+            <div id="hiddenEmv" class="col-sm-12">
                 <table class="table table-striped table-bordered table-hover">
                     <thead class="thead-dark">
                         <tr>
