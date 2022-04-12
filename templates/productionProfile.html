@@ -265,7 +265,7 @@
                     <option value="defbyInput">From Input File</option>
                 </select>
                 <br>
-                <div id="hidden_cvc3" class="input-group">
+                <div id="hidden_cvc3" class="input-group ms-4">
                     <table class="table table-striped table-bordered table-hover text-center">
                         <thead class="thead-dark">
                             <tr>
@@ -282,25 +282,27 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="g-2 padding-xs mb-2" id="myButton">
+                    <div class="g-2 padding-xs mb-4" id="myButton">
                         <button type="button" class="btn btn-success btn-sm" onclick="addRow()">Add row</button>
                         <button type="button" class="btn btn-danger btn-sm" onclick="deleteRow()" id="deleteBtn">Delete row</button>
                     </div>
-                    <div class="input-group mb-3 col-sm-5">
-                        <label class="input-group-text" for="inputGroupCVV">CVV Expiration Date Format</label>
-                        <select class="form-select" id="inputGroupCVV">
-                        <option disabled selected>Choose...</option>
-                        <option value="YYMM">YYMM</option>
-                        <option value="MMYY">MMYY</option>
-                        </select>
-                    </div>
-                    <div class="input-group mb-3 col-sm-5">
-                        <label class="input-group-text" for="inputGroupiCVV">iCVV Expiration Date Format</label>
-                        <select class="form-select" id="inputGroupiCVV">
-                        <option disabled selected>Choose...</option>
-                        <option value="YYMM">YYMM</option>
-                        <option value="MMYY">MMYY</option>
-                        </select>
+                    <div class="input-group row cvvExp">
+                        <div class="input-group mb-3 col cvvExp">
+                            <label class="input-group-text" for="inputGroupCVV">CVV Expiration Date Format</label>
+                            <select class="form-select" id="inputGroupCVV">
+                            <option disabled selected>Choose...</option>
+                            <option value="YYMM">YYMM</option>
+                            <option value="MMYY">MMYY</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-3 col icvvEXP">
+                            <label class="input-group-text" for="inputGroupiCVV">iCVV Expiration Date Format</label>
+                            <select class="form-select" id="inputGroupiCVV">
+                            <option disabled selected>Choose...</option>
+                            <option value="YYMM">YYMM</option>
+                            <option value="MMYY">MMYY</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
