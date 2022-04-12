@@ -69,7 +69,21 @@ function toggleSelect3()
         hiddenEmv.style.display = "none"
     } 
     
-
 } 
 
+function toggleSelect4(divId_hidden, divId_check, divId_select, element)
+{
+    var element = document.getElementById(divId_hidden)
+    var isChecked = document.getElementById(divId_check).checked
+    document.getElementById(divId_select).disabled = !isChecked;
+
+    if (isChecked){
+        element.style.display = "block"
+    }
+    else {
+        element.style.display = "none"
+    } 
+    
+
+} 
 
