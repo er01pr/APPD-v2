@@ -36,7 +36,7 @@ function addRow() { //Not working properly
     cell2.innerHTML = "NEW CELL2";
 }
 
-
+//Obsolete function. Needs to be refactored like toggleSelect4
 function toggleSelect()
 {
     var isChecked = document.getElementById("track1_check").checked
@@ -56,6 +56,7 @@ function toggleSelect2()
     document.getElementById("track3_select").disabled = !isChecked;
 } 
 
+//Obsolete function. Needs to be refactored to toggleSelect4
 function toggleSelect3()
 {
     var hiddenEmv = document.getElementById("hiddenEmv")
@@ -71,6 +72,7 @@ function toggleSelect3()
     
 } 
 
+// A function to show/hide contents of a div when the checkbox is checked.
 function toggleSelect4(divId_hidden, divId_check, divId_select, element)
 {
     var element = document.getElementById(divId_hidden)
@@ -84,6 +86,5 @@ function toggleSelect4(divId_hidden, divId_check, divId_select, element)
         element.style.display = "none"
     } 
     
-
-} 
+}
 
