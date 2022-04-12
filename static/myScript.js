@@ -39,6 +39,19 @@ function addRow() { //Not working properly
 
 function toggleSelect()
 {
-  var isChecked = document.getElementById("track1_check").checked;
-  document.getElementById("track1_select").disabled = !isChecked;
+    var isChecked = document.getElementById("track1_check").checked
+    document.getElementById("track1_select").disabled = !isChecked;
+
 }
+function toggleSelect1()
+{
+    var isChecked = document.getElementById("track2_check").checked
+    document.getElementById("track2_select").disabled = !isChecked;
+} 
+
+function toggleSelect2()
+{
+    var isChecked = document.getElementById("track3_check").checked
+    document.getElementById("track3_select").disabled = !isChecked;
+} 
+

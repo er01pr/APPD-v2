@@ -84,33 +84,33 @@
             <div class="input-group mb-3">
                 <div class="input-group-text">
                     <label>Track2</label>
-                    <input class="form-check-input ms-2" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    <input id="track2_check" class="form-check-input ms-2" type="checkbox" value="" onClick="toggleSelect1()">
                 </div>
-                <select id="track2" type="text" class="form-control" placeholder="Choose.." required>
+                <select id="track2_select" type="text" class="form-control" placeholder="Choose.." required onchange="showDiv('hidden_track2txt', this)" disabled>
                     <option value="" disabled selected>Choose..</option>
-                    <option value="defbyRule2">Defined by Rule</option>
+                    <option value="1">Defined by Rule</option>
                     <option value="defbyInput2">Defined within Input File</option>
                     <option value="sameAsRef2">Same as Reference Profile</option>
                 </select>
             </div>
-            <div class="form-floating">
+            <div class="form-floating" id="hidden_track2txt">
                 <textarea class="form-control" placeholder="Track 2" id="track1txt"></textarea>
                 <label class="form-label" for="track1txt">  Track 2 </label>
             </div>
             <div class="input-group mb-3">  
                 <div class="input-group-text">
                     <label>Track3</label>
-                    <input class="form-check-input ms-2" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    <input id="track3_check" class="form-check-input ms-2" type="checkbox" value=""  onClick="toggleSelect2()">
                 </div>
-                <select id="track3" type="text" class="form-control" placeholder="Choose.." required>
+                <select id="track3_select" type="text" class="form-control" placeholder="Choose.." required onchange="showDiv('hidden_track3txt', this)" disabled>
                     <option value="" disabled selected>Choose..</option>
-                    <option value="defbyRule3">Defined by Rule</option>
+                    <option value="1">Defined by Rule</option>
                     <option value="defbyInput3">Defined within Input File</option>
                     <option value="sameAsRef3">Same as Reference Profile</option>
                 </select>
             </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Track 3" id="track1txt"></textarea>
+            <div class="form-floating" id="hidden_track3txt">
+                <textarea class="form-control" placeholder="Track 3"></textarea>
                 <label class="form-label" for="track3txt">  Track 3 </label>
             </div>
             
@@ -137,7 +137,7 @@
             <div class="input-group mb-2">
                 <div class="input-group-text">
                   <label class="externalLabel">EMV 3DES Keys   </label>
-                  <input class="form-check-input ms-2" type="checkbox" value="" aria-label="Checkbox for following text input">
+                  <input class="form-check-input ms-2" type="checkbox" value="" aria-label="Checkbox for following text input" onClick="toggleSelect3()">
                 </div>
                 <select id="emv" type="text" class="form-control" placeholder="Choose.." required>
                     <option value="" disabled selected>Choose..</option>
@@ -145,7 +145,7 @@
                     <option value="defbyInput">From Input File</option>
                 </select>
             </div>
-            <div class="col-sm-12">
+            <div class="col-sm-12 hidden">
                 <table class="table table-striped table-bordered table-hover">
                     <thead class="thead-dark">
                         <tr>
