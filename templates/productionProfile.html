@@ -246,9 +246,9 @@
             <div class="input-group mb-3">
                 <div class="input-group-text mb-3">
                   <label class="externalLabel">Certificates</label>
-                  <input class="form-check-input ms-2 mb-3" type="checkbox" value="" aria-label="Checkbox for following text input">
+                  <input id="cert_check" class="form-check-input ms-2 mb-3" type="checkbox" value="" aria-label="Checkbox for following text input" onclick="toggleSelect4('', 'cert_check', 'cert_select', '')">
                 </div>
-                <select id="certificates" type="text" class="form-control mb-3" placeholder="Choose.." required disabled>
+                <select id="cert_select" type="text" class="form-control mb-3" placeholder="Choose.." required disabled>
                     <option value="" disabled selected>Choose..</option>
                     <option value="defbyRule">Computed by DPHSM</option>
                     <option value="defbyInput">From Input File</option>
@@ -315,7 +315,7 @@
                   <label class="externalLabel">PIN</label>
                   <input id="pin_check" class="form-check-input ms-2" type="checkbox" value="" aria-label="Checkbox for following text input" onclick="toggleSelect4('hidden_PIN', 'pin_check', 'pin_select', 'hidden_PIN')">
                 </div>
-                <select id="pin" type="text" class="form-control" placeholder="Choose.." required>
+                <select id="pin_select" type="text" class="form-control" placeholder="Choose.." required disabled>
                     <option value="" disabled selected>Choose..</option>
                     <option value="defbyRule">Computed by DPHSM</option>
                     <option value="defbyInput">From Input File</option>
