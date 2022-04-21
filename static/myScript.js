@@ -20,14 +20,14 @@ function showDiv(divId, element)
     document.getElementById(divId).style.display = element.value == 1 ? 'block' : 'none';
 }
 
-function addRow(divId) {
+/* function addRow(divId) {
     //Find a <table> element with divId"
     var table = document.getElementById(divId);
 
     //Create an empty <tr> element and add it to the last position of the table:
     row = table.insertRow(-1);
 
-    //Insert new cells (<td elements) at the 1st and 2nd position of the "new" <tr> element:
+    //Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
     var element1 = document.createElement('input');
     var element2 = document.createElement('input');
     element1.type = "text";
@@ -43,12 +43,36 @@ function addRow(divId) {
     //Append the newly created cells in the table.
     cell1.appendChild(element1)
     cell2.appendChild(element2)
+} */
+
+function addRow(divId) {
+    //Find a <table> element with divId"
+    var table = document.getElementById(divId);
+
+    //Create an empty <tr> element and add it to the last position of the table:
+    row = table.insertRow(-1);
+
+    //Count the number of columns
+
+    length = document.getElementById(divId).rows[0].cells.length
+
+    //Insert new cells (<td> elements) at the nth position of the table. Make the new cells as an input group (text). Add a "form-control" class. Append the newly created cells at the bottom. 
+    for (i = 0; i < length; i++ ) {
+        row.insertCell(i).appendChild(document.createElement('input')).classList.add("form-control");
+    }
+
 }
+
 
 function deleteRow (divId) {
     var table = document.getElementById(divId);
+
+    //Prevent the header not be removed    
+    if (table.rows.length != 1) {
+        table.deleteRow(-1);
+    }
     
-    table.deleteRow(-1);
+    
 }
 
 //Obsolete function. Needs to be refactored like toggleSelect4
