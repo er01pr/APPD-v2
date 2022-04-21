@@ -20,9 +20,9 @@ function showDiv(divId, element)
     document.getElementById(divId).style.display = element.value == 1 ? 'block' : 'none';
 }
 
-function addRow() {
-    //Find a <table> element with id="myTable"
-    var table = document.getElementById('myTable');
+function addRow(divId) {
+    //Find a <table> element with divId"
+    var table = document.getElementById(divId);
 
     //Create an empty <tr> element and add it to the last position of the table:
     row = table.insertRow(-1);
@@ -45,8 +45,8 @@ function addRow() {
     cell2.appendChild(element2)
 }
 
-function deleteRow () {
-    var table = document.getElementById('myTable');
+function deleteRow (divId) {
+    var table = document.getElementById(divId);
     
     table.deleteRow(-1);
 }
