@@ -20,20 +20,35 @@ function showDiv(divId, element)
     document.getElementById(divId).style.display = element.value == 1 ? 'block' : 'none';
 }
 
-function addRow() { //Not working properly
-    
+function addRow() {
     //Find a <table> element with id="myTable"
-    var table = document.getElementById("myTable")
+    var table = document.getElementById('myTable');
 
     //Create an empty <tr> element and add it to the last position of the table:
-    var row = table.insertRow(0);
+    row = table.insertRow(-1);
 
     //Insert new cells (<td elements) at the 1st and 2nd position of the "new" <tr> element:
-    var cell1 = row.inserCell(0)
-    var cell2 = row.inserCell(1)
+    var element1 = document.createElement('input');
+    var element2 = document.createElement('input');
+    element1.type = "text";
 
-    cell1.innerHTML = "NEW CELL1";
-    cell2.innerHTML = "NEW CELL2";
+    //Add class in the elements
+    element1.classList.add("form-control");
+    element2.classList.add("form-control");
+
+    cell1 = row.insertCell(0);
+    cell2 = row.insertCell(1);
+
+    
+    //Append the newly created cells in the table.
+    cell1.appendChild(element1)
+    cell2.appendChild(element2)
+}
+
+function deleteRow () {
+    var table = document.getElementById('myTable');
+    
+    table.deleteRow(-1);
 }
 
 //Obsolete function. Needs to be refactored like toggleSelect4
