@@ -40,7 +40,7 @@ body {
 	height: 350px !important;
 }
 
-#hidden_track1txt, #hidden_track2txt, #hidden_track3txt, #hiddenEmv, #hiddenRSA, #hidden_cvc3, #hidden_PIN
+#hidden_track1txt, #hidden_track2txt, #hidden_track3txt, #hiddenEmv, #hiddenRSA, #hidden_cvc3, #hidden_PIN, #hidden_PSN, #hidden_exp, #hidden_eff, #hidden_servcode, #hidden_DKI, #hidden_CVN
 {
 	display : none
 }

@@ -375,14 +375,14 @@
                     <div class="input-group-text">
                         <label class="additionalInfoLabel">PAN Sequence Number(PSN)</label>
                     </div>
-                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required onchange="showDiv('hidden_PSN', this)">
                         <option value="" disabled selected>Choose..</option>
-                        <option value="defbyRule">Defined by Rule</option>
+                        <option value="1">Defined by Rule</option>
                         <option value="defbyInput">Defined within Input File</option>
                         <option value="sameAsRef">Same as Reference Profile</option>
                     </select>
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3" id="hidden_PSN">
                     <textarea class="form-control infoTxtLabel" placeholder="Leave a comment here"></textarea>
                     <label class="ms-2 infoTxtLabel">Rule</label>
                 </div> 
@@ -390,14 +390,14 @@
                     <div class="input-group-text">
                         <label class="additionalInfoLabel">EXPIRATION DATE</label>
                     </div>
-                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required onchange="showDiv('hidden_exp', this)">
                         <option value="" disabled selected>Choose..</option>
-                        <option value="defbyRule">Defined by Rule</option>
+                        <option value="1">Defined by Rule</option>
                         <option value="defbyInput">Defined within Input File</option>
                         <option value="sameAsRef">Same as Reference Profile</option>
                     </select>
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3" id="hidden_exp">
                     <textarea class="form-control infoTxtLabel" placeholder="Leave a comment here"></textarea>
                     <label class="ms-2 infoTxtLabel">Rule</label>
                 </div> 
@@ -405,14 +405,14 @@
                     <div class="input-group-text">
                         <label class="additionalInfoLabel">EFFECTIVE DATE</label>
                     </div>
-                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required onchange="showDiv('hidden_eff', this)">
                         <option value="" disabled selected>Choose..</option>
-                        <option value="defbyRule">Defined by Rule</option>
+                        <option value="1">Defined by Rule</option>
                         <option value="defbyInput">Defined within Input File</option>
                         <option value="sameAsRef">Same as Reference Profile</option>
                     </select>
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3" id="hidden_eff">
                     <textarea class="form-control infoTxtLabel" placeholder="Leave a comment here"></textarea>
                     <label class="ms-2 infoTxtLabel">Rule</label>
                 </div> 
@@ -420,14 +420,14 @@
                     <div class="input-group-text">
                         <label class="additionalInfoLabel">SERVICE CODE</label>
                     </div>
-                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required onchange="showDiv('hidden_servcode', this)">
                         <option value="" disabled selected>Choose..</option>
-                        <option value="defbyRule">Defined by Rule</option>
+                        <option value="1">Defined by Rule</option>
                         <option value="defbyInput">Defined within Input File</option>
                         <option value="sameAsRef">Same as Reference Profile</option>
                     </select>
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3" id="hidden_servcode">
                     <textarea class="form-control infoTxtLabel" placeholder="Leave a comment here"></textarea>
                     <label class="ms-2 infoTxtLabel">Rule</label>
                 </div> 
@@ -435,14 +435,14 @@
                     <div class="input-group-text">
                         <label class="additionalInfoLabel">DERIVATION KEY INDEX (DKI)</label>
                     </div>
-                    <select id="dki" type="text" class="form-control" placeholder="Choose.." required>
+                    <select id="dki" type="text" class="form-control" placeholder="Choose.." required onchange="showDiv('hidden_DKI', this)">
                         <option value="" disabled selected>Choose..</option>
-                        <option value="defbyRule">Defined by Rule</option>
+                        <option value="1">Defined by Rule</option>
                         <option value="defbyInput">Defined within Input File</option>
                         <option value="sameAsRef">Same as Reference Profile</option>
                     </select>
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3" id="hidden_DKI">
                     <textarea class="form-control infoTxtLabel" placeholder="Leave a comment here"></textarea>
                     <label class="ms-2 infoTxtLabel">Rule</label>
                 </div> 
@@ -450,14 +450,14 @@
                     <div class="input-group-text">
                         <label class="additionalInfoLabel">CRYPTOGRAM VERSION NUMBER (CVN)</label>
                     </div>
-                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required>
+                    <select id="track1" type="text" class="form-control" placeholder="Choose.." required required onchange="showDiv('hidden_CVN', this)">
                         <option value="" disabled selected>Choose..</option>
-                        <option value="defbyRule">Defined by Rule</option>
+                        <option value="1">Defined by Rule</option>
                         <option value="defbyInput">Defined within Input File</option>
                         <option value="sameAsRef">Same as Reference Profile</option>
                     </select>
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3" id="hidden_CVN">
                     <textarea class="form-control infoTxtLabel" placeholder="Leave a comment here"></textarea>
                     <label class="ms-2 infoTxtLabel">Rule</label>
                 </div> 
