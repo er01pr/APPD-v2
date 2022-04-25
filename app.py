@@ -53,9 +53,32 @@ def home():
     if request.method == "POST":
         print("This is POST!")
         name = request.form["projName"]
-        print(name)
         author_select = request.form["author_select"]
+        version_select = request.form["version_select"]
+        projectNum = request.form["projectNum"]
+        product_select = request.form["product_select"]
+        cps_version = request.form["cps_version"]
+        service_pack = request.form["service_pack"]
+        cps_version1 = request.form["cps_version1"]
+        service_pack1 = request.form["service_pack1"]
+        cps_server = request.form["cps_server"]
+        cps_server1 = request.form["cps_server1"]
+
+        print(name)
         print(author_select)
+        print(version_select)
+        print(projectNum)
+        print(product_select)
+        print(cps_version)
+        print(service_pack)
+        print(cps_version1)
+        print(service_pack1)
+        print(cps_server)
+        print(cps_server1)
+
+        
+                    
+
         return render_template("index.html", author_list=author_list, server_list=server_list)
     else:
         print("This is a GET!")

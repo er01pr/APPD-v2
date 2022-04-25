@@ -33,14 +33,14 @@
             </div>
             <div class = "col-sm-2">
                 <label for="version" class="form-label">Version</label>
-                <input id="version" type="text" class="form-control" placeholder="1" required>
+                <input id="version" type="text" class="form-control" placeholder="1" name="version_select" required>
                 <div class="invalid-feedback">
                     Valid version number is required.
                 </div>
             </div>
             <div class = "col-sm-2">
                 <label for="projectNum" class="form-label">Project Number</label>
-                <input id="projectNum" type="text" class="form-control" placeholder="1234" required>
+                <input id="projectNum" type="text" class="form-control" placeholder="1234" name="projectNum" required>
                 <div class="invalid-feedback">
                     Valid version number is required.
                 </div> 
@@ -49,18 +49,18 @@
             <h4 class="mb-1">PROFILE</h4>
             <div class="col-sm-6">
                 <label for="product" class="form-label">Product Type</label>
-                <select id="product" type="text" class="form-control" placeholder="Choose.." required>
-                        <option value="" disabled selected>Choose..</option>
+                <select id="product" type="text" class="form-control" placeholder="Choose.." name="product_select" required>
+                        <option value="none_product" disabled selected>Choose..</option>
                         <option value="dual">Dual</option>
                         <option value="contact">Contact</option>
                 </select>
             </div>
             <div class="col-sm-6">
                 <label for="perso_type" class="form-label">Perso Type</label>
-                <select id="perso_type" type="text" class="form-control" placeholder="Choose.." required>
-                        <option value="" disabled selected>Choose..</option>
-                        <option value="dual">Perso</option>
-                        <option value="contact">Pre-Perso</option>
+                <select id="perso_type" type="text" class="form-control" placeholder="Choose.." name="perso_select" required>
+                        <option value="none_perso" disabled selected>Choose..</option>
+                        <option value="Perso">Perso</option>
+                        <option value="Pre-Perso">Pre-Perso</option>
                 </select>
             </div>
             <div class="col-sm-12">
@@ -75,10 +75,10 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input id="cps-version" type="text" class="form-control"></td>
-                            <td><input id="service-pack" type="text" class="form-control"></td>
+                            <td><input id="cps-version" type="text" class="form-control" name="cps_version"></td>
+                            <td><input id="service-pack" type="text" class="form-control" name="service_pack"></td>
                             <td>
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example" name="cps_server">
                                     <option value="" disabled selected>Choose..</option>
                                     {% for server in server_list %}
                                         <option> {{ server }} </option>
@@ -87,10 +87,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><input id="cps-version" type="text" class="form-control"></td>
-                            <td><input id="service-pack" type="text" class="form-control"></td>
+                            <td><input id="cps-version" type="text" class="form-control" name="cps_version1"></td>
+                            <td><input id="service-pack" type="text" class="form-control" name="service_pack1"></td>
                             <td>
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example" name="cps_server1">
                                     <option value="" disabled selected>Choose..</option>
                                     {% for server in server_list %}
                                         <option> {{ server }} </option>
