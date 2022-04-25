@@ -24,9 +24,9 @@ def after_request(response):
     return response
 
 #Homepage
-@app.route("/")
+@app.route("/", methods=["POST", "GET"])
 def home():
-    
+
     #Configure App to connect with the SQLite Database
     connection = sqlite3.connect('appd.db')
     cursor = connection.cursor()
@@ -50,8 +50,16 @@ def home():
     server_list = [server[0] for server in servers]
     print(server_list)
 
-
-    return render_template("index.html", author_list=author_list, server_list=server_list)
+    if request.method == "POST":
+        print("This is POST!")
+        name = request.form["projName"]
+        print(name)
+        author_select = request.form["author_select"]
+        print(author_select)
+        return render_template("index.html", author_list=author_list, server_list=server_list)
+    else:
+        print("This is a GET!")
+        return render_template("index.html", author_list=author_list, server_list=server_list)
 
 
 #Card Profile Config

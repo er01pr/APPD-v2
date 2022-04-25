@@ -12,16 +12,16 @@
 </div>
 
 <div class="container">
-    <form novalidate>
+    <form action="#" method = "post"  novalidate>
         <h4 class="mb-3">PROJECT</h4>
         <div class="row g-3">
             <div>
-                <label for="projectName" class="form-label">Project Name</label>
-                <input id="projectName" type="text" class="form-control">
+                <label for="projectName" class="form-label" name="projName">Project Name</label>
+                <input id="projectName" type="text" class="form-control" name="projName">
             </div>
             <div class = "col-sm-8">
                 <label for="author" class="form-label">Author</label>
-                <input id="author" type="text" class="form-control" placeholder="John Smith" list = "authorList" required>
+                <input id="author" type="text" class="form-control" placeholder="John Smith" list = "authorList" name="author_select"  required>
                 <datalist id="authorList">
                     {% for author in author_list %}
                         <option>{{ author }}</option>
@@ -149,8 +149,11 @@
                     </div>
                 </div>
             </div>
-
+            <div class="center">
+                <input class="btn btn-primary col-sm-5" type="submit" value="submit"></input>
+            </div>
         </div>
+    
     </form>
 </div>
 
