@@ -56,14 +56,14 @@ def home():
         author_select = request.form["author_select"]
         version_select = request.form["version_select"]
         projectNum = request.form["projectNum"]
-        product_select = request.form["product_select"]
+        product_select = request.form.get("product_select")
         cps_version = request.form["cps_version"]
         service_pack = request.form["service_pack"]
         cps_version1 = request.form["cps_version1"]
         service_pack1 = request.form["service_pack1"]
-        cps_server = request.form["cps_server"]
-        cps_server1 = request.form["cps_server1"]
-
+        cps_server = request.form.get("cps_server")
+        cps_server1 = request.form.get("cps_sever1")
+        
         print(name)
         print(author_select)
         print(version_select)
@@ -75,7 +75,6 @@ def home():
         print(service_pack1)
         print(cps_server)
         print(cps_server1)
-
         
                     
 
