@@ -127,3 +127,16 @@ function toggleSelect4(divId_hidden, divId_check, divId_select, element)
     
 }
 
+
+
+//JavaScript Client Validation
+/*
+window.addEventListener('load', 
+  function() { 
+    var nodes = document.querySelectorAll("input[type=text]");
+        for (var i=0; i<nodes.length; i++)
+    {
+        console.log(nodes[i].value);
+    }
+  }, false);
+/*

@@ -64,6 +64,7 @@ def home():
         cps_server = request.form.get("cps_server")
         cps_server1 = request.form.get("cps_sever1")
         
+        
         print(name)
         print(author_select)
         print(version_select)

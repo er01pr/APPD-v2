@@ -18,6 +18,9 @@
             <div>
                 <label for="projectName" class="form-label" name="projName">Project Name</label>
                 <input id="projectName" type="text" class="form-control" name="projName" required>
+                <div class="invalid-feedback">
+                    Please provide a project name.
+                </div> 
             </div>
             <div class = "col-sm-8">
                 <label for="author" class="form-label">Author</label>
@@ -27,20 +30,20 @@
                         <option>{{ author }}</option>
                     {% endfor %}
                 </datalist>
-                <div class="invalid-feedback">
-                    Valid Author Name is required.
+                <div class="valid-feedback">
+                    Looks good to me!
                 </div> 
             </div>
             <div class = "col-sm-2">
                 <label for="version" class="form-label">Version</label>
-                <input id="version" type="text" class="form-control" placeholder="1" name="version_select" required>
+                <input id="version" type="number" class="form-control" placeholder="1" name="version_select" required>
                 <div class="invalid-feedback">
                     Valid version number is required.
                 </div>
             </div>
             <div class = "col-sm-2">
                 <label for="projectNum" class="form-label">Project Number</label>
-                <input id="projectNum" type="text" class="form-control" placeholder="1234" name="projectNum" required>
+                <input id="projectNum" type="number" class="form-control" placeholder="1234" name="projectNum" required>
                 <div class="invalid-feedback">
                     Valid version number is required.
                 </div> 
