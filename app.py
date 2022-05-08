@@ -5,6 +5,7 @@ import os
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
+import datetime
 
 #Current Directory of the project
 currentdirectory = os.path.dirname(os.path.abspath(__file__))
@@ -28,12 +29,12 @@ def after_request(response):
 def home():
 
     #Configure App to connect with the SQLite Database
-    connection = sqlite3.connect('appd.db')
-    cursor = connection.cursor()
+    con = sqlite3.connect('appd.db')
+    cur = con.cursor()
     
     #Read and fetch the Author_name in the database
     readdb = "SELECT AUTHOR_name FROM Author"
-    authors = cursor.execute(readdb)
+    authors = cur.execute(readdb)
     authors = authors.fetchall()
 
 
@@ -43,7 +44,7 @@ def home():
 
     #Read and feth the server in Servers database.
     serverdb = "SELECT server FROM Servers"
-    servers = cursor.execute(serverdb)
+    servers = cur.execute(serverdb)
     servers = servers.fetchall()
 
     #Convert server tuples to list via list comprehension
@@ -64,6 +65,7 @@ def home():
         cps_server = request.form.get("cps_server")
         cps_server1 = request.form.get("cps_sever1")
         
+        time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
         print(name)
         print(author_select)
@@ -76,6 +78,17 @@ def home():
         print(service_pack1)
         print(cps_server)
         print(cps_server1)
+        print(time)
+
+        #INSERT values into the Project Database
+        cur.execute("INSERT INTO Project (PROJECT_id, PROJECT_name, AUTHOR_name, VERSION_id, PRODUCT_type, CPS_version, SERV_pack, CPS_server, UPLOAD_time) VALUES (?, ?, ?, ?, ?, ?, ? , ?, ?)", [projectNum, name, author_select, version_select, product_select, cps_version, service_pack, cps_server, time])
+
+        #Commit our con
+        con.commit()
+
+        #Close our con
+        con.close()
+
         
                     
 
@@ -91,12 +104,12 @@ def home():
 def cardconfig():  
 
     #Configure App to connect with the SQLite Database
-    connection = sqlite3.connect('appd.db')
-    cursor = connection.cursor() 
+    con = sqlite3.connect('appd.db')
+    cur = con.cur() 
 
     #Read and fetch Products in the database.
     readdb = "SELECT PRODUCT_name FROM Products"
-    products = cursor.execute(readdb)
+    products = cur.execute(readdb)
     products = products.fetchall()
 
     #Convert product tuples to list via list comprehension
