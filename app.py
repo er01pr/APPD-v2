@@ -88,9 +88,7 @@ def home():
 
         #Close our con
         con.close()
-
-        
-                    
+   
 
         return render_template("index.html", author_list=author_list, server_list=server_list)
     else:
@@ -99,13 +97,13 @@ def home():
 
 
 #Card Profile Config
-@app.route("/card")
+@app.route("/card", methods=["POST", "GET"])
     
 def cardconfig():  
 
     #Configure App to connect with the SQLite Database
     con = sqlite3.connect('appd.db')
-    cur = con.cur() 
+    cur = con.cursor() 
 
     #Read and fetch Products in the database.
     readdb = "SELECT PRODUCT_name FROM Products"
@@ -115,17 +113,18 @@ def cardconfig():
     #Convert product tuples to list via list comprehension
     productNames = [product[0] for product in products]
     print(productNames)
+
     
     return render_template("cardconfig.html", productNames=productNames)
 
 
-@app.route("/pprofile")
+@app.route("/pprofile", methods=["POST", "GET"])
 
 def productionProfile ():
 
     return render_template("productionProfile.html")
 
-@app.route("/additional")
+@app.route("/additional", methods=["POST", "GET"])
 
 def additionalReq ():
     
