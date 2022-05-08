@@ -59,6 +59,7 @@ body {
 }
 
 .center
-{
+{	
+	display:block;
 	text-align: center;
 }

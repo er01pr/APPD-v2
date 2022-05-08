@@ -127,6 +127,11 @@ function toggleSelect4(divId_hidden, divId_check, divId_select, element)
     
 }
 
+.center
+{
+	text-align: center;
+}
+
 
 
 //JavaScript Client Validation
