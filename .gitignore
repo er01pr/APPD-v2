@@ -1,1 +1,13 @@
+#Virual ENV
 .venv
+
+
+#Python
+*/__pycache__/*
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask stuff:
+instance/
+.webassets-cache
