@@ -20,33 +20,13 @@ function showDiv(divId, element)
     document.getElementById(divId).style.display = element.value == 1 ? 'block' : 'none';
 }
 
-/* function addRow(divId) {
-    //Find a <table> element with divId"
-    var table = document.getElementById(divId);
 
-    //Create an empty <tr> element and add it to the last position of the table:
-    row = table.insertRow(-1);
-
-    //Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
-    var element1 = document.createElement('input');
-    var element2 = document.createElement('input');
-    element1.type = "text";
-
-    //Add class in the elements
-    element1.classList.add("form-control");
-    element2.classList.add("form-control");
-
-    cell1 = row.insertCell(0);
-    cell2 = row.insertCell(1);
-
-    
-    //Append the newly created cells in the table.
-    cell1.appendChild(element1)
-    cell2.appendChild(element2)
-} */
 
 function addRow(divId) {
     //Find a <table> element with divId"
+
+    console.log("ADD ROW!!")
+
     var table = document.getElementById(divId);
 
     //Create an empty <tr> element and add it to the last position of the table:
@@ -127,10 +107,7 @@ function toggleSelect4(divId_hidden, divId_check, divId_select, element)
     
 }
 
-.center
-{
-	text-align: center;
-}
+
 
 
 
