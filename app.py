@@ -24,9 +24,9 @@ def after_request(response):
     return response
 
 #Homepage
-@app.route("/")
+@app.route("/", methods=["POST", "GET"])
 def home():
-    
+
     #Configure App to connect with the SQLite Database
     connection = sqlite3.connect('appd.db')
     cursor = connection.cursor()
@@ -50,8 +50,39 @@ def home():
     server_list = [server[0] for server in servers]
     print(server_list)
 
+    if request.method == "POST":
+        print("This is POST!")
+        name = request.form["projName"]
+        author_select = request.form["author_select"]
+        version_select = request.form["version_select"]
+        projectNum = request.form["projectNum"]
+        product_select = request.form.get("product_select")
+        cps_version = request.form["cps_version"]
+        service_pack = request.form["service_pack"]
+        cps_version1 = request.form["cps_version1"]
+        service_pack1 = request.form["service_pack1"]
+        cps_server = request.form.get("cps_server")
+        cps_server1 = request.form.get("cps_sever1")
+        
+        
+        print(name)
+        print(author_select)
+        print(version_select)
+        print(projectNum)
+        print(product_select)
+        print(cps_version)
+        print(service_pack)
+        print(cps_version1)
+        print(service_pack1)
+        print(cps_server)
+        print(cps_server1)
+        
+                    
 
-    return render_template("index.html", author_list=author_list, server_list=server_list)
+        return render_template("index.html", author_list=author_list, server_list=server_list)
+    else:
+        print("This is a GET!")
+        return render_template("index.html", author_list=author_list, server_list=server_list)
 
 
 #Card Profile Config
