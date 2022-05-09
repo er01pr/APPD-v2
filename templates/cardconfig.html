@@ -12,7 +12,7 @@
 </div>
 
 <div class="container">
-    <form action="#"  method = "post">
+    <form action="#"  method = "post" novalidate>
         <h4 class="mb-3">Card Profile Config</h4>
         <div class="row g-3">
             <div class="col-sm-12">
@@ -26,12 +26,12 @@
                     </thead>
                     <tbody id="myBody">
                         <tr>
-                            <td><input id="app" type="text" class="form-control"></td>
-                            <td><input id="applet" type="text" class="form-control"></td>
+                            <td><input id="app" name="app" type="text" class="form-control"></td>
+                            <td><input id="applet" name="applet" type="text" class="form-control"></td>
                         </tr>
                         <tr>
-                            <td><input id="app" type="text" class="form-control"></td>
-                            <td><input id="applet" type="text" class="form-control"></td>
+                            <td><input id="app1" type="text" class="form-control"></td>
+                            <td><input id="applet1" type="text" class="form-control"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -300,6 +300,10 @@
                     </tbody>
                 </table>
             </div>
+            <div class="text-center">
+                <input class="btn btn-primary col-sm-4" type="submit" value="submit"></input>
+            </div>
+        </div> 
     </form>
 </div>
 {% endblock %}

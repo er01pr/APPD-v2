@@ -82,6 +82,7 @@ def home():
 
         #INSERT values into the Project Database
         cur.execute("INSERT INTO Project (PROJECT_id, PROJECT_name, AUTHOR_name, VERSION_id, PRODUCT_type, CPS_version, SERV_pack, CPS_server, UPLOAD_time) VALUES (?, ?, ?, ?, ?, ?, ? , ?, ?)", [projectNum, name, author_select, version_select, product_select, cps_version, service_pack, cps_server, time])
+        print("INSERTED Successfully!")
 
         #Commit our con
         con.commit()
@@ -89,8 +90,7 @@ def home():
         #Close our con
         con.close()
    
-
-        return render_template("index.html", author_list=author_list, server_list=server_list)
+        return redirect("/card")
     else:
         print("This is a GET!")
         return render_template("index.html", author_list=author_list, server_list=server_list)
@@ -114,8 +114,18 @@ def cardconfig():
     productNames = [product[0] for product in products]
     print(productNames)
 
-    
-    return render_template("cardconfig.html", productNames=productNames)
+    if request.method == "POST":
+        app = request.form["app"]
+        applet = request.form["applet"]
+
+        print("This is a POST!")
+        print(app)
+        print (applet)
+
+
+        return redirect("/pprofile")
+    else: 
+        return render_template("cardconfig.html", productNames=productNames)
 
 
 @app.route("/pprofile", methods=["POST", "GET"])
