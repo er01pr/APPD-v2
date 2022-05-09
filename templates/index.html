@@ -12,7 +12,7 @@
 </div>
 
 <div class="container">
-    <form action="#" method = "post">
+    <form action="/card" method = "post">
         <h4 class="mb-3">PROJECT</h4>
         <div class="row g-3">
             <div>
@@ -24,12 +24,12 @@
             </div>
             <div class = "col-sm-8">
                 <label for="author" class="form-label">Author</label>
-                <input id="author" type="text" class="form-control" placeholder="John Smith" list = "authorList" name="author_select"  required>
-                <datalist id="authorList">
+                <select id="authorList" class="form-control" placeholder="Choose.." name="author_select" required>
+                    <option value="" disabled selected>Choose..</option>
                     {% for author in author_list %}
                         <option>{{ author }}</option>
                     {% endfor %}
-                </datalist>
+                </select>
                 <div class="valid-feedback">
                     Looks good to me!
                 </div> 
@@ -53,7 +53,7 @@
             <div class="col-sm-6">
                 <label for="product" class="form-label">Product Type</label>
                 <select id="product" type="text" class="form-control" placeholder="Choose.." name="product_select" required>
-                        <option value="default value" disabled selected>Choose..</option>
+                        <option value="" disabled selected>Choose..</option>
                         <option value="dual">Dual</option>
                         <option value="contact">Contact</option>
                 </select>
@@ -61,7 +61,7 @@
             <div class="col-sm-6">
                 <label for="perso_type" class="form-label">Perso Type</label>
                 <select id="perso_type" type="text" class="form-control" placeholder="Choose.." name="perso_select" required>
-                        <option value="none_perso" disabled selected>Choose..</option>
+                        <option value="" disabled selected>Choose..</option>
                         <option value="Perso">Perso</option>
                         <option value="Pre-Perso">Pre-Perso</option>
                 </select>
@@ -143,7 +143,7 @@
                     </div>
                     <div class="form-check g-3">
                         <input type="checkbox" class="form-check-input" id="chk" onclick="showHide()">
-                        <label class="form-check-label" for="inputFile">Have Complementary Test File?</label>
+                        <label class="form-check-label mb-3" for="inputFile">Have Complementary Test File?</label>
                         <br/>
                         <label for="comp1" type="text" name="comp1" class="hidden">Complementary Test File (1)</label>
                         <input id="comp1" type="text" class="form-control hidden">
@@ -152,11 +152,10 @@
                     </div>
                 </div>
             </div>
-            <div class="center">
-                <input class="btn btn-primary col-sm-5" type="submit" value="submit"></input>
-            </div>
         </div>
-    
+        <div class="text-center">
+            <input class="btn btn-primary col-sm-4" type="submit" value="submit"></input>
+        </div>
     </form>
 </div>
 
