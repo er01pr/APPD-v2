@@ -1,4 +1,5 @@
 from cgitb import html
+from turtle import down
 from flask import Flask, flash, redirect, render_template, request, session, url_for
 import sqlite3
 import os
@@ -117,10 +118,28 @@ def cardconfig():
     if request.method == "POST":
         app = request.form["app"]
         applet = request.form["applet"]
+        pseCheck = request.form.get('pseCheck')
+        ppseCheck = request.form.get('ppseCheck')
+        ndefCheck = request.form.get('ndefCheck')
+        productName = request.form["productName"]
+        maskRef = request.form.get('maskRef')
+        atrConfig = request.form["atrConfig"]
+        loaNum = request.form.get('loaNum')
+        alcd = request.form.get('alcd')
+        downsizing = request.form["downsizing"]
 
         print("This is a POST!")
         print(app)
         print (applet)
+        print(pseCheck)
+        print(ppseCheck)
+        print(ndefCheck)
+        print(productName)
+        print(maskRef)
+        print(atrConfig)
+        print(loaNum)
+        print(alcd)
+        print(downsizing)
 
 
         return redirect("/pprofile")

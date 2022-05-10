@@ -36,21 +36,21 @@
                     </tbody>
                 </table>
                 <div class="g-2 padding-xs" id="myButton">
-                    <button type="button" class="btn btn-success btn-sm" onclick="addRow('myTable')">Add row</button>
-                    <button type="button" class="btn btn-danger btn-sm" onclick="deleteRow('myTable')" id="deleteBtn">Delete row</button>
+                    <button type="button" class="btn btn-success btn-sm" onclick="addRow('emvTable')">Add row</button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="deleteRow('emvTable')" id="deleteBtn">Delete row</button>
                 </div>
             </div>
         </div>
             <div class="form-check form-check-inline g-3">
-                <input type="checkbox" class="form-check-input">
+                <input type="checkbox" name="pseCheck" class="form-check-input" value="yes">
                 <label class="form-check-label" for="PSE">PSE Supported</label>
             </div>
             <div class="form-check form-check-inline g-3">
-                    <input type="checkbox" class="form-check-input">
+                    <input type="checkbox" name="ppseCheck" class="form-check-input" value="yes">
                     <label class="form-check-label" for="PPSE">PPSE Supported</label>
             </div>
             <div class="form-check form-check-inline g-3">
-                    <input type="checkbox" class="form-check-input">
+                    <input type="checkbox" name="ndefCheck" class="form-check-input" value="yes">
                     <label class="form-check-label" for="ndef">NDEF Supported</label>
             </div>
         <hr class="my-4">
@@ -58,44 +58,44 @@
         <div class="row g-3">
             <div class = "col-sm-6">
                 <label for="productNames" class="form-label">Product Name</label>
-                <input id="productName" type="text" class="form-control" list="productNames" name="productName" required>
-                <datalist id="productNames">
+                <select id="productNames" class="form-control" placeholder="Choose.." name="productName">
+                    <option value="" disabled selected>Choose..</option>
                     {% for product in productNames %}
                         <option>{{ product }}</option>
                     {% endfor %}
-                </datalist>
+                </select>
                 <div class="invalid-feedback">
                     Valid Author Name is required.
                 </div>
             </div>
             <div class = "col-sm-6">
                 <label for="maskRef" class="form-label">Mask Reference</label>
-                <input id="maskRef" type="text" class="form-control" required>
+                <input id="maskRef" type="text" class="form-control" name="maskRef" required>
                 <div class="invalid-feedback">
                     Valid version number is required.
                 </div>
             </div>
             <div class = "col-sm-6">
                 <label for="atrConfig" class="form-label">ATR Configuration</label>
-                <input id="atrConfig" type="text" class="form-control" required>
+                <input id="atrConfig" type="text" class="form-control" name="atrConfig" required>
                 <div class="invalid-feedback">
                     Valid version number is required.
                 </div>
             </div>
             <div class = "col-sm-6">
                 <label for="LOAno" class="form-label">LOA no.</label>
-                <input id="LOAno" type="text" class="form-control" required>
+                <input id="LOAno" type="text" class="form-control" name="loaNum">
                 <div class="invalid-feedback">
                     Valid version number is required.
                 </div>
             </div>
             <div class = "col-sm-6">
                 <label for="ALCD" class="form-label">ALCD (for MASTERCARD only)</label>
-                <input id="ALCD" type="text" class="form-control">
+                <input id="ALCD" type="text" class="form-control" name="alcd">
             </div>
             <div class="col-sm-6">
                 <label for="downsizing" class="form-label">Downsizing</label>
-                <select id="downsizings" type="text" class="form-control" placeholder="Choose.." required>
+                <select id="downsizings" type="text" class="form-control" placeholder="Choose.." name="downsizing" required>
                         <option value="" disabled selected>Choose..</option>
                         <option value="12K">12K</option>
                         <option value="16K">16K</option>

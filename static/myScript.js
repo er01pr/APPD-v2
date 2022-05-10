@@ -50,7 +50,7 @@ function addRow(divId) {
     if (table.id != 'myTable')
     {
             //Create an empty <tr> element and add it to the last position of the table:
-            row = table.insertRow(-1);
+            //row = table.insertRow(-1);
 
             //Count the number of columns
     
@@ -113,7 +113,7 @@ function addRow(divId) {
 
         //Insert new cells (<td> elements) at the nth position of the table. Make the new cells as an input group (text). Add a "form-control" class. Append the newly created cells at the bottom. 
         //for (i = 0; i < length; i++ ) {
-        //testrow = row.insertCell(i).appendChild(document.createElement('input')).classList.add("form-control");
+        
 
         //Find a <table> element with id="myTable"
         var table = document.getElementById(divId);
@@ -157,6 +157,25 @@ function addRow(divId) {
         console.log("The After Length is " + afterLength);
     }
 
+}
+
+function addRow1 (divId) {
+
+    console.log("ADD ROW!!")
+
+    var table = document.getElementById(divId);
+
+    //Create an empty <tr> element and add it to the last position of the table:
+    row = table.insertRow(-1);
+
+    //Count the number of columns
+
+    length = document.getElementById(divId).rows[0].cells.length
+
+    //Insert new cells (<td> elements) at the nth position of the table. Make the new cells as an input group (text). Add a "form-control" class. Append the newly created cells at the bottom. 
+    for (i = 0; i < length; i++ ) {
+        row.insertCell(i).appendChild(document.createElement('input')).classList.add("form-control");
+    }
 }
 
 
