@@ -28,24 +28,9 @@ function showDiv(divId, element)
 function addRow(divId) {
     //Find a <table> element with divId"
 
-    console.log("ADD ROW!!")
-
     var table = document.getElementById(divId);
 
-    length = document.getElementById(divId).rows[0].cells.length
-
-    console.log(length)
-
-    //Length of Table (Columns and rows)
-
-    rowLength = table.tBodies[0].rows.length;
-    console.log("The length of row is " + rowLength);
-
-    if (table.id == 'myTable' && rowLength > 6)
-    {
-        return;
-
-    }
+    rowLength = table.tBodies[0].rows.length -1;
 
     if (table.id != 'myTable')
     {
@@ -102,18 +87,15 @@ function addRow(divId) {
             }
     }
 
-    else 
+    if (table.id == 'myTable' && rowLength < 3)
     {
         //Create an empty <tr> element and add it to the last position of the table:
-        row = table.insertRow(-1);
-
         //Count the number of columns
-
-
 
         //Insert new cells (<td> elements) at the nth position of the table. Make the new cells as an input group (text). Add a "form-control" class. Append the newly created cells at the bottom. 
         //for (i = 0; i < length; i++ ) {
         
+        console.log("ADD ROW!!")
 
         //Find a <table> element with id="myTable"
         var table = document.getElementById(divId);
@@ -155,6 +137,10 @@ function addRow(divId) {
 
         afterLength = table.tBodies[0].rows.length - 1;
         console.log("The After Length is " + afterLength);
+    }
+
+    else {
+        return;
     }
 
 }
