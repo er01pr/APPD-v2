@@ -77,6 +77,7 @@ function addRow(divId) {
             }
     }
 
+    //For myTable (App/Applet) the maximum number of rows is Four. 
     if (table.id == 'myTable' && rowLength < 3)
     {
         //Find a <table> element with id="myTable"
@@ -110,7 +111,7 @@ function addRow(divId) {
         cell2.appendChild(element2)
 
 
-        
+        //Add dynamic names (app1, app2, appn.... applet1, applet2, appletn...) to send data to Flask.
         for (i=0; i<rowLength;i++)
         {
             element1.setAttribute("name", "app" + [i])
@@ -125,6 +126,7 @@ function addRow(divId) {
 
 }
 
+//This is the shorter version of addRow function.
 function addRow1 (divId) {
 
     console.log("ADD ROW!!")
@@ -144,7 +146,7 @@ function addRow1 (divId) {
     }
 }
 
-
+//Delete Rows.
 function deleteRow (divId) {
     var table = document.getElementById(divId);
 
