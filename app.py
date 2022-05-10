@@ -161,7 +161,16 @@ def cardconfig():
 
 def productionProfile ():
 
-    return render_template("productionProfile.html")
+    if request.method == "POST":
+
+        cusOffer = request.form['cusOffer']
+
+        print(cusOffer)
+        
+        return redirect("/additional")
+
+    else:
+        return render_template("productionProfile.html")
 
 @app.route("/additional", methods=["POST", "GET"])
 

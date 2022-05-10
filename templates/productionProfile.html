@@ -17,7 +17,7 @@
         <div class="row g-3">
             <div class="col-md-12">
                 <label for="customerOffer" class="form-label">Customer Offer</label>
-                <input id="customerOffer" type="text" class="form-control">
+                <input id="customerOffer" type="text" class="form-control" name="cusOffer">
             </div>
             <div class="col-md-12">
                 <label for="grammar" class="form-label">Grammar</label>
@@ -487,10 +487,10 @@
                     <button type="button" class="btn btn-danger btn-sm" onclick="deleteRow('extTable')" id="deleteBtn">Delete row</button>
                 </div>
             </div>
-
-
         </div> 
-
+        <div class="text-center">
+            <input class="btn btn-primary col-sm-4" type="submit" value="submit"></input>
+        </div>
     </form>
 </div>
 {% endblock %}
