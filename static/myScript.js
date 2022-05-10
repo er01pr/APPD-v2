@@ -1,3 +1,6 @@
+var rowLength = 0;
+
+
 //A function to show or hide the Complementary files input group in index.html
 function showHide(){
     var checkbox = document.getElementById("chk")
@@ -29,60 +32,130 @@ function addRow(divId) {
 
     var table = document.getElementById(divId);
 
-    //Create an empty <tr> element and add it to the last position of the table:
-    row = table.insertRow(-1);
-
-    //Count the number of columns
-
     length = document.getElementById(divId).rows[0].cells.length
 
     console.log(length)
 
-    //Insert new cells (<td> elements) at the nth position of the table. Make the new cells as an input group (text). Add a "form-control" class. Append the newly created cells at the bottom. 
-    //for (i = 0; i < length; i++ ) {
-      //testrow = row.insertCell(i).appendChild(document.createElement('input')).classList.add("form-control");
-
-    //Find a <table> element with id="myTable"
-    var table = document.getElementById(divId);
-
-    //Create an empty <tr> element and add it to the last position of the table:
-    row = table.insertRow(-1);
-
-    //Insert new cells (<td elements) at the 1st and 2nd position of the "new" <tr> element:
-    var element1 = document.createElement('input');
-    var element2 = document.createElement('input');
-    element1.type = "text";
-    element2.type = "text";
-
-    element1.setAttribute("name", "app1")
-    element2.setAttribute("name", "row1")
-    console.log("Create Element Input!")
-
-    //Add class in the elements
-    element1.classList.add("form-control");
-    element2.classList.add("form-control");
-    console.log("Add class form-control!")
-
-    cell1 = row.insertCell(0);
-    cell2 = row.insertCell(1);
-    console.log("Insert Cell index 1 and 2!")
-
-    
-    //Append the newly created cells in the table.
-    cell1.appendChild(element1)
-    cell2.appendChild(element2)
-    console.log("Append!")
-
     //Length of Table (Columns and rows)
-    rowLength = table.tBodies[0].rows.length -1;
-    
-    for (i=0; i<rowLength;i++)
+
+    rowLength = table.tBodies[0].rows.length;
+    console.log("The length of row is " + rowLength);
+
+    if (table.id == 'myTable' && rowLength > 6)
     {
-        console.log("Column" + [i]);
-        element1.setAttribute("name", "app" + [i])
-        element2.setAttribute("name", "applet" + [i])
+        return;
+
     }
-    //}
+
+    if (table.id != 'myTable')
+    {
+            //Create an empty <tr> element and add it to the last position of the table:
+            row = table.insertRow(-1);
+
+            //Count the number of columns
+    
+    
+    
+            //Insert new cells (<td> elements) at the nth position of the table. Make the new cells as an input group (text). Add a "form-control" class. Append the newly created cells at the bottom. 
+            //for (i = 0; i < length; i++ ) {
+            //testrow = row.insertCell(i).appendChild(document.createElement('input')).classList.add("form-control");
+    
+            //Find a <table> element with id="myTable"
+            var table = document.getElementById(divId);
+    
+            //Create an empty <tr> element and add it to the last position of the table:
+            row = table.insertRow(-1);
+    
+            //Insert new cells (<td elements) at the 1st and 2nd position of the "new" <tr> element:
+            var element1 = document.createElement('input');
+            var element2 = document.createElement('input');
+            element1.type = "text";
+            element2.type = "text";
+    
+            element1.setAttribute("name", "app1")
+            element2.setAttribute("name", "row1")
+            console.log("Create Element Input!")
+    
+            //Add class in the elements
+            element1.classList.add("form-control");
+            element2.classList.add("form-control");
+            console.log("Add class form-control!")
+    
+            cell1 = row.insertCell(0);
+            cell2 = row.insertCell(1);
+            console.log("Insert Cell index 1 and 2!")
+    
+            
+            //Append the newly created cells in the table.
+            cell1.appendChild(element1)
+            cell2.appendChild(element2)
+            console.log("Append!")
+    
+            //Length of Table (Columns and rows)
+            rowLength = table.tBodies[0].rows.length -1;
+            
+            for (i=0; i<rowLength;i++)
+            {
+                console.log("Column" + [i]);
+                element1.setAttribute("name", "app" + [i])
+                element2.setAttribute("name", "applet" + [i])
+            }
+    }
+
+    else 
+    {
+        //Create an empty <tr> element and add it to the last position of the table:
+        row = table.insertRow(-1);
+
+        //Count the number of columns
+
+
+
+        //Insert new cells (<td> elements) at the nth position of the table. Make the new cells as an input group (text). Add a "form-control" class. Append the newly created cells at the bottom. 
+        //for (i = 0; i < length; i++ ) {
+        //testrow = row.insertCell(i).appendChild(document.createElement('input')).classList.add("form-control");
+
+        //Find a <table> element with id="myTable"
+        var table = document.getElementById(divId);
+
+        //Create an empty <tr> element and add it to the last position of the table:
+        row = table.insertRow(-1);
+
+        //Insert new cells (<td elements) at the 1st and 2nd position of the "new" <tr> element:
+        var element1 = document.createElement('input');
+        var element2 = document.createElement('input');
+        element1.type = "text";
+        element2.type = "text";
+
+        element1.setAttribute("name", "app1")
+        element2.setAttribute("name", "row1")
+
+
+        //Add class in the elements
+        element1.classList.add("form-control");
+        element2.classList.add("form-control");
+
+
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+
+
+        
+        //Append the newly created cells in the table.
+        cell1.appendChild(element1)
+        cell2.appendChild(element2)
+
+
+        
+        for (i=0; i<rowLength;i++)
+        {
+            element1.setAttribute("name", "app" + [i])
+            element2.setAttribute("name", "applet" + [i])
+        }
+
+        afterLength = table.tBodies[0].rows.length - 1;
+        console.log("The After Length is " + afterLength);
+    }
 
 }
 
@@ -90,10 +163,14 @@ function addRow(divId) {
 function deleteRow (divId) {
     var table = document.getElementById(divId);
 
+    console.log("Table rows length in Delete is" + table.rows.length)
     //Prevent the header not be removed    
     if (table.rows.length != 1) {
         table.deleteRow(-1);
+        console.log("Delete Row!")
+        console.log("The number of rows after deletion is " + table.tBodies[0].rows.length)
     }
+
     
     
 }
