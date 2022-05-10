@@ -96,7 +96,7 @@
             <div class="col-sm-6">
                 <label for="downsizing" class="form-label">Downsizing</label>
                 <select id="downsizings" type="text" class="form-control" placeholder="Choose.." name="downsizing" required>
-                        <option value="" disabled selected>Choose..</option>
+                        <option value="" selected disabled>Choose..</option>
                         <option value="12K">12K</option>
                         <option value="16K">16K</option>
                         <option value="24K">24K</option>
@@ -111,53 +111,53 @@
             <h6>Tag Values :</h6>
             <div class="form-check">
                 <div class="form-check-inline g-3 col-sm-4">
-                    <input type="radio" class="form-check-input" name="tagRadio">
+                    <input type="radio" class="form-check-input" name="tagRadio" value="As Per Input File">
                     <label class="form-check-label" for="asPerInput">As per input file</label>
                 </div>
                 <div class="form-check-inline g-3 col-sm-4">
-                        <input type="radio" class="form-check-input " name="tagRadio">
+                        <input type="radio" class="form-check-input " name="tagRadio" value="As Per Technical Document">
                         <label class="form-check-label" for="asPerTech">As per Technical Document</label>
                 </div>
                 <div class="form-check-inline g-3 col-sm-4">
-                        <input type="radio" class="form-check-input" name="tagRadio">
+                        <input type="radio" class="form-check-input" name="tagRadio" value="As Per Reference Profile">
                         <label class="form-check-label " for="asPerRef">As per Reference Profile</label>
                 </div>   
             </div>
-            <input id="tagValues" type="text" class="form-control">
+            <input id="tagValues" type="text" class="form-control" name="tagText">
 
             <h6>File Structure :</h6>
             <div class="form-check">
                 <div class="form-check-inline g-3 col-sm-4">
-                    <input type="radio" class="form-check-input" name="structureRadio">
+                    <input type="radio" class="form-check-input" name="fsRadio" value="As Per Input File">
                     <label class="form-check-label " for="asPerInput">As per input file</label>
                 </div>
                 <div class="form-check-inline g-3 col-sm-4">
-                        <input type="radio" class="form-check-input " name="structureRadio">
+                        <input type="radio" class="form-check-input " name="fsRadio" value="As Per Technical Document">
                         <label class="form-check-label " for="asPerTech">As per Technical Document</label>
                 </div>
                 <div class="form-check-inline g-3 col-sm-4">
-                        <input type="radio" class="form-check-input" name="structureRadio">
+                        <input type="radio" class="form-check-input" name="fsRadio" value="As Per Reference Profile">
                         <label class="form-check-label " for="asPerRef">As per Reference Profile</label>
                 </div>   
             </div>
-            <input id="fileStructure" type="text" class="form-control">
+            <input id="fileStructure" type="text" class="form-control" name="fsText">
 
             <h6>Signed Data :</h6>
             <div class="form-check">
                 <div class="form-check-inline g-3 col-sm-4">
-                    <input type="radio" class="form-check-input" name="signedDataRadio">
+                    <input type="radio" class="form-check-input" name="sdRadio" value="As Per Input File">
                     <label class="form-check-label " for="asPerInput">As per input file</label>
                 </div>
                 <div class="form-check-inline g-3 col-sm-4">
-                        <input type="radio" class="form-check-input " name="signedDataRadio">
+                        <input type="radio" class="form-check-input " name="sdRadio" value="As Per Technical Document">
                         <label class="form-check-label " for="asPerTech">As per Technical Document</label>
                 </div>
                 <div class="form-check-inline g-3 col-sm-4">
-                        <input type="radio" class="form-check-input" name="signedDataRadio">
+                        <input type="radio" class="form-check-input" name="sdRadio" value="As Per Reference Profile">
                         <label class="form-check-label " for="asPerRef">As per Reference Profile</label>
                 </div>   
                 <div class="form-check-inline g-3 col-sm-4">
-                    <input type="radio" class="form-check-input" name="signedDataRadio">
+                    <input type="radio" class="form-check-input" name="sdRadio" value="Specific Structure">
                     <label class="form-check-label " for="asPerRef">Specific Structure</label>
                 </div>
                 

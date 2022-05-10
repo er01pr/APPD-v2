@@ -127,6 +127,11 @@ def cardconfig():
         loaNum = request.form.get('loaNum')
         alcd = request.form.get('alcd')
         downsizing = request.form["downsizing"]
+        tagRadio = request.form.get('tagRadio')
+        fsRadio = request.form.get('fsRadio')
+        sdRadio = request.form.get('sdRadio')
+        tagText = request.form.get('tagText')
+        fsText = request.form.get('fsText')
 
         print("This is a POST!")
         print(app)
@@ -140,6 +145,11 @@ def cardconfig():
         print(loaNum)
         print(alcd)
         print(downsizing)
+        print(tagRadio)
+        print(fsRadio)
+        print(sdRadio)
+        print(tagText)
+        print(fsText)
 
 
         return redirect("/pprofile")
