@@ -106,7 +106,7 @@
                             <td><input id="cps-version" type="text" class="form-control"></td>
                             <td><input id="service-pack" type="text" class="form-control"></td>
                             <td>
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example" name="cps_server2">
                                     <option value="" disabled selected>Choose..</option>
                                     {% for key, value  in server_dict.items() %}
                                         <option value="{{ key }}" > {{ value }} </option>

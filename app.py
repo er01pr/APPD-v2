@@ -116,6 +116,17 @@ def cardconfig():
     productNames = [product[0] for product in products]
     print(productNames)
 
+    #Read and fetch Applications in the database.
+    readdb = "SELECT APP_name FROM Applications"
+    apps = cur.execute(readdb)
+    apps = apps.fetchall()
+
+    #Convert product tuples to list via list comprehension
+    appNames = [app[0] for app in apps]
+    print(appNames)
+    
+
+
     if request.method == "POST":
         app = request.form["app"]
         applet = request.form["applet"]
@@ -155,7 +166,7 @@ def cardconfig():
 
         return redirect("/pprofile")
     else: 
-        return render_template("cardconfig.html", productNames=productNames)
+        return render_template("cardconfig.html", productNames=productNames, appNames=appNames)
 
 
 @app.route("/pprofile", methods=["POST", "GET"])
