@@ -1,4 +1,5 @@
 from cgitb import html
+from tkinter.font import ROMAN
 from turtle import down
 from flask import Flask, flash, redirect, render_template, request, session, url_for
 import sqlite3
@@ -43,14 +44,37 @@ def home():
     author_list = [author[0] for author in authors]
     print(author_list)
 
-    #Read and feth the server in Servers database.
-    serverdb = "SELECT server FROM Servers"
-    servers = cur.execute(serverdb)
-    servers = servers.fetchall()
+
+    #Read and fetch the server in Servers database.
+    #serverdb = "SELECT server FROM Servers"
+    #servers = cur.execute(serverdb)
+    #servers = servers.fetchall()
+
+    #serverids = "SELECT server_id FROM Servers"
+    #serverids = cur.execute(serverids)
+    #serverids = serverids.fetchall()
 
     #Convert server tuples to list via list comprehension
-    server_list = [server[0] for server in servers]
-    print(server_list)
+    #server_list = [server[0] for server in servers]
+    #print(server_list)
+
+    #Convert server id tuples to list via list comprehension
+    #server_id_list = [server_id[0] for server_id in serverids]
+    
+    #print(server_id_list)
+
+
+    #Read and fetch the server id and server in Server Database
+    serverdict = "SELECT server_id, server FROM Servers"
+    serverdict = cur.execute(serverdict)
+    serverdict = serverdict.fetchall()
+
+    print(serverdict)
+
+    server_dict= dict(serverdict)
+    print(server_dict)
+
+
 
     if request.method == "POST":
         print("This is POST!")
@@ -64,7 +88,7 @@ def home():
         cps_version1 = request.form["cps_version1"]
         service_pack1 = request.form["service_pack1"]
         cps_server = request.form.get("cps_server")
-        cps_server1 = request.form.get("cps_sever1")
+        cps_server1 = request.form.get("cps_server1")
         
         time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
@@ -77,8 +101,7 @@ def home():
         print(service_pack)
         print(cps_version1)
         print(service_pack1)
-        print(cps_server)
-        print(cps_server1)
+        print(f"This is the CPS Server {cps_server} ")
         print(time)
 
         #INSERT values into the Project Database
@@ -94,7 +117,7 @@ def home():
         return redirect("/card")
     else:
         print("This is a GET!")
-        return render_template("index.html", author_list=author_list, server_list=server_list)
+        return render_template("index.html", author_list=author_list, server_dict=server_dict)
 
 
 #Card Profile Config

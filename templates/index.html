@@ -84,8 +84,8 @@
                             <td>
                                 <select class="form-select" aria-label="Default select example" name="cps_server">
                                     <option value="" disabled selected>Choose..</option>
-                                    {% for server in server_list %}
-                                        <option value={{server}} > {{ server }} </option>
+                                    {% for key, value  in server_dict.items() %}
+                                        <option value="{{ key }}" > {{ value }} </option>
                                     {% endfor %}
                                 </select>
                             </td>
@@ -96,8 +96,8 @@
                             <td>
                                 <select class="form-select" aria-label="Default select example" name="cps_server1">
                                     <option value="" disabled selected>Choose..</option>
-                                    {% for server in server_list %}
-                                        <option> {{ server }} </option>
+                                    {% for key, value  in server_dict.items() %}
+                                        <option value="{{ key }}" > {{ value }} </option>
                                     {% endfor %}
                                 </select>
                             </td>
@@ -108,8 +108,8 @@
                             <td>
                                 <select class="form-select" aria-label="Default select example">
                                     <option value="" disabled selected>Choose..</option>
-                                    {% for server in server_list %}
-                                        <option> {{ server }} </option>
+                                    {% for key, value  in server_dict.items() %}
+                                        <option value="{{ key }}" > {{ value }} </option>
                                     {% endfor %}
                                 </select>
                             </td>
