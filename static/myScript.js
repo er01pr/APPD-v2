@@ -126,6 +126,36 @@ function addRow(divId) {
 
 }
 
+function addSelect (divId) {
+
+    //Find a <table> element with divId"
+
+    var table = document.getElementById(divId).tBodies[0];
+
+    var rowLength = table.rows.length;
+
+    console.log(rowLength)
+
+    //Find a row to clone
+    var node = table.rows[1].cloneNode(true);
+    children = node.children
+    console.log(children)
+    node.id = "app" + rowLength
+    node.setAttribute("name", "app" + rowLength)
+
+    var selects = table.getElementsByTagName("select");
+
+    for (var i = 1; i <= selects.length; i++) {
+        selects[i].setAttribute("name", "app" + i)
+        console.log(selects[i])
+    }
+
+    table.appendChild(node)
+    
+    //Still need to change the name attribute of the select tag.
+
+}
+
 //This is the shorter version of addRow function.
 function addRow1 (divId) {
 

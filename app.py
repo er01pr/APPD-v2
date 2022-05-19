@@ -128,7 +128,7 @@ def cardconfig():
 
 
     if request.method == "POST":
-        app = request.form["app"]
+        app = request.form["app0"]
         applet = request.form["applet"]
         pseCheck = request.form.get('pseCheck')
         ppseCheck = request.form.get('ppseCheck')
