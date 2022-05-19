@@ -45,36 +45,14 @@ def home():
     print(author_list)
 
 
-    #Read and fetch the server in Servers database.
-    #serverdb = "SELECT server FROM Servers"
-    #servers = cur.execute(serverdb)
-    #servers = servers.fetchall()
-
-    #serverids = "SELECT server_id FROM Servers"
-    #serverids = cur.execute(serverids)
-    #serverids = serverids.fetchall()
-
-    #Convert server tuples to list via list comprehension
-    #server_list = [server[0] for server in servers]
-    #print(server_list)
-
-    #Convert server id tuples to list via list comprehension
-    #server_id_list = [server_id[0] for server_id in serverids]
-    
-    #print(server_id_list)
-
-
     #Read and fetch the server id and server in Server Database
     serverdict = "SELECT server_id, server FROM Servers"
     serverdict = cur.execute(serverdict)
     serverdict = serverdict.fetchall()
 
-    print(serverdict)
-
+    #Convert the serverdict tuple to a dictionary
     server_dict= dict(serverdict)
     print(server_dict)
-
-
 
     if request.method == "POST":
         print("This is POST!")
@@ -105,7 +83,7 @@ def home():
         print(time)
 
         #INSERT values into the Project Database
-        cur.execute("INSERT INTO Project (PROJECT_id, PROJECT_name, AUTHOR_name, VERSION_id, PRODUCT_type, CPS_version, SERV_pack, CPS_server, UPLOAD_time) VALUES (?, ?, ?, ?, ?, ?, ? , ?, ?)", [projectNum, name, author_select, version_select, product_select, cps_version, service_pack, cps_server, time])
+        cur.execute("INSERT INTO Project (PROJECT_id, PROJECT_name, AUTHOR_name, VERSION_id, PRODUCT_type, CPS_version, SERV_pack, SERVER_id, UPLOAD_time) VALUES (?, ?, ?, ?, ?, ?, ? , ?, ?)", [projectNum, name, author_select, version_select, product_select, cps_version, service_pack, cps_server, time])
         print("INSERTED Successfully!")
 
         #Commit our con
