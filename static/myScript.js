@@ -132,27 +132,32 @@ function addSelect (divId) {
 
     var table = document.getElementById(divId).tBodies[0];
 
-    var rowLength = table.rows.length;
+    var rowLength = table.rows.length + 1;
 
-    console.log(rowLength)
+    if (rowLength < 5) {
+        //Find a row to clone
+        var node = table.rows[1].cloneNode(true);
+        children = node.children
 
-    //Find a row to clone
-    var node = table.rows[1].cloneNode(true);
-    children = node.children
-    console.log(children)
-    node.id = "app" + rowLength
-    node.setAttribute("name", "app" + rowLength)
+        var selects = table.getElementsByTagName("select");
+        console.log("selects" + selects)
 
-    var selects = table.getElementsByTagName("select");
+        table.appendChild(node)
 
-    for (var i = 1; i <= selects.length; i++) {
-        selects[i].setAttribute("name", "app" + i)
-        console.log(selects[i])
+        try {
+            for (var i = 0; i < selects.length + 1; i++) {
+                selects[i].setAttribute("name", "app" + i)
+                console.log(selects[i])
+            }
+        }catch(e) {
+            console.log("YO",e)
+        }
+
+        
+    }   
+    else {
+        return
     }
-
-    table.appendChild(node)
-    
-    //Still need to change the name attribute of the select tag.
 
 }
 

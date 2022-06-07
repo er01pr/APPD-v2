@@ -128,7 +128,7 @@ def cardconfig():
 
 
     if request.method == "POST":
-        app = request.form["app0"]
+        app = request.form.get('app0')
         applet = request.form["applet"]
         pseCheck = request.form.get('pseCheck')
         ppseCheck = request.form.get('ppseCheck')
@@ -144,6 +144,7 @@ def cardconfig():
         sdRadio = request.form.get('sdRadio')
         tagText = request.form.get('tagText')
         fsText = request.form.get('fsText')
+        macLength = request.form.get('macLength')
 
         print("This is a POST!")
         print(app)
@@ -162,6 +163,8 @@ def cardconfig():
         print(sdRadio)
         print(tagText)
         print(fsText)
+        print(macLength)
+
 
 
         return redirect("/pprofile")
